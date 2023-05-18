@@ -1,0 +1,389 @@
+<!--
+  ALT + Z para que el texto se adecúe a la ventana.
+-->
+<!--
+    DECLARACIÓN DEL ARCHIVO
+    ==================================
+    Esta debería ser nuestra primer línea en cualquier archivo .html:
+
+    <!DOCTYPE html>
+
+    Se utiliza para determinar qué versión de HTML vamos a utilizar. 
+    NOTA: Tener en cuenta que es una declaración, no una etiqueta. 
+-->
+
+<!--
+  <!DOCTYPE html>  
+-->
+
+
+
+<!--
+    ELEMENTOS
+    ==================================
+    Los elementos son los componentes básicos de nuestro código, ya que determinan
+    la estructura que tendrá nuestra página web.
+
+    Podemos pensar en ellos como los ladrillos de una construcción.
+
+    Ejemplo de un elemento:
+
+        <head>
+            <meta charset="UTF-8">
+            <title>r/Argentina programa | Intro a JavaScript</title>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=GFS+Didot">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200">
+            <link rel="stylesheet" href="css/main.css">
+        </head>
+
+
+    ETIQUETAS
+    ==================================
+    Las etiquetas se usan para declarar el TIPO de elemento que vamos a usar.
+    A las etiquetas se las suele llamar "tags" y tienen la siguiente estructura:
+        
+        <Tipo_de_elemento> Contenido del elemento </Tipo_de_elemento> 
+        
+    NOTA: Nótese el "/" en la etiqueta de cierre. Aunque cabe aclarar que
+          existen varias etiquetas que ni siquiera necesitan de esta.
+    
+    Ejemplos:
+        <header></header>
+        <p></p>
+        <img /> Como puedes ver, esta no tiene una etiqueta de cierre.
+-->
+
+
+
+<!--
+    ESTRUCTURA
+    ====================================
+    ¡Vamos armando el archivo!
+
+    Lo primero después de declarar la versión que utilizaremos será crear nuestros
+    elementos base.
+
+    El primero es el elemento raíz, llamado así porque todos los demás elementos que
+    conformarán al estructura de nuestra página deben estar contenidos dentro de este
+    elemento principal.
+
+    Y se ve así:
+
+    <html>
+
+    </html>
+
+
+    Dentro de este estarán otros dos elementos principales: 
+
+        <head>
+                
+        </head>
+                Aquí pondremos la metadata, que es información acerca del documento, como enlaces a 
+                archivos externos que necesita la página, y que generalmente no se ve cuando uno navega por él.
+                También dentro de "head" podemos personalizar el título de la página.
+
+        <body>
+
+        </body>
+                Dentro del elemento "body" vamos a definir la estructura de la página.
+-->
+
+<!--
+Se vería así: 
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+  </head>
+  <body>
+
+  </body>
+        
+</html>
+-->
+
+
+
+<!--
+    ESPECIFICAR LENGUAJE
+    ===========================================
+
+    Para especificar el idioma de la página web (o una parte de ella) podemos colocar el 
+    atributo "Lang" en la etiqueta de apertura.
+
+    Se coloca:
+    <Tipo_de_elemento lang = "abreviatura_del_idioma">
+-->
+
+<!--
+  Se vería así: 
+
+  <html lang = "es">  JUSTO AQUÍ
+    <head>
+
+    </head>
+    <body>
+
+    </body>      
+  </html>
+-->
+
+
+
+<!--
+  CREAR ENCABEZADOS
+  =======================================
+
+  los encabezados o "headings" Se utilizan para crear Títulos y subtítulos
+  en la página. SE ESCRIBE SIEMPRE DENTRO DEL BODY.
+
+  Se numeran desde 1 en adelante. A mayor el número, más pequeño el Título o subtítulo.
+
+  Se coloca:
+  <h1>Título_o_subtítulo</h1>
+
+  NOTA: Solo se puede variar entre 1 y 6. Si probamos, por ejemplo, poniendo <h7>, ya no
+    se verá el título en negrita y tendrá otro tamaño.
+-->
+
+<!--
+Se vería así:
+
+<!DOCTYPE html>
+
+<html lang = "es">  
+
+  <body>
+      <h3>¡UN PASO MÁS!</h3>
+  </body>
+        
+</html>
+-->
+
+
+
+<!--
+  PÁRRAFOS
+  =======================================
+
+  SE ESCRIBEN SIEMPRE DENTRO DEL BODY.
+
+  Los párrafos son el típico texto que veremos en una página web. El nombre 
+  que tienen se debe a que cada etiqueta de párrafo encierra un párrafo de texto
+  en la página. Nada mejor que un ejemplo para explicar cómo funcionan.
+
+  Se coloca:
+  <p>Párrafo</p>
+
+  Por lo tanto, si queremos escribir un texto completo debería lucir así:
+
+  <p>Vladimir Bartol fue un escritor esloveno nacido en 1903 y fallecido en 1967. Aunque escribió varias obras, su trabajo más conocido es la novela "Alamut", publicada en 1938. La obra se convirtió en un éxito de ventas y es considerada una de las obras más importantes de la literatura eslovena del siglo XX.</p>
+  <p>Bartol estudió en la Universidad de Ljubljana, donde se graduó en Filosofía y Lengua y Literatura eslovenas. Tras terminar sus estudios, se mudó a Trieste, donde trabajó como periodista y escritor. Durante la Segunda Guerra Mundial, se unió a la Resistencia y fue uno de los fundadores del Partido Comunista esloveno.</p>
+  <p>Aunque Bartol escribió varias obras, ninguna de ellas tuvo el éxito de "Alamut". La novela cuenta la historia de un líder musulmán del siglo XI que crea una secta con la que controla a sus seguidores mediante la manipulación de la realidad y la promesa de recompensas en la vida después de la muerte. La obra ha sido comparada con "1984" de George Orwell y "Un mundo feliz" de Aldous Huxley por su crítica a la manipulación y el control de la realidad.</p>
+
+  ¿Ves las etiquetas de apertura y de cierre al principio y al final de cada párrafo?
+-->
+
+<!--
+Se vería así:
+
+<!DOCTYPE html>
+
+<html lang = "es">  
+
+  <body>
+      <h1>Breve biografía sobre Vladimir Bartol</h1>
+      <h3>El autor que inspiró al videojuego "Assassins Creed"</h3>
+      <p>Vladimir Bartol fue un escritor esloveno nacido en 1903 y fallecido en 1967. Aunque escribió varias obras, su trabajo más conocido es la novela "Alamut", publicada en 1938. La obra se convirtió en un éxito de ventas y es considerada una de las obras más importantes de la literatura eslovena del siglo XX.</p>
+      <p>Bartol estudió en la Universidad de Ljubljana, donde se graduó en Filosofía y Lengua y Literatura eslovenas. Tras terminar sus estudios, se mudó a Trieste, donde trabajó como periodista y escritor. Durante la Segunda Guerra Mundial, se unió a la Resistencia y fue uno de los fundadores del Partido Comunista esloveno.</p>
+      <p>Aunque Bartol escribió varias obras, ninguna de ellas tuvo el éxito de "Alamut". La novela cuenta la historia de un líder musulmán del siglo XI que crea una secta con la que controla a sus seguidores mediante la manipulación de la realidad y la promesa de recompensas en la vida después de la muerte. La obra ha sido comparada con "1984" de George Orwell y "Un mundo feliz" de Aldous Huxley por su crítica a la manipulación y el control de la realidad.</p>
+  </body>
+        
+</html>
+-->
+
+
+
+
+<!--
+  MAIN
+  =======================================
+  La etiqueta <main> encierra el CONTENIDO PRINCIPAL de nuestra página y se suele usar
+  siempre dentro de la etiqueta <body>. 
+  Cuando abramos la página veremos que estéticamente no se diferencia de otros elementos, pero 
+  HTML lo interpreta como la parte más importante del documento.
+
+  Se coloca:
+  <main></main>
+-->
+
+<!--
+<!DOCTYPE html>
+
+<html lang = "es">  
+
+  <body>
+      <h1>Breve biografía sobre Vladimir Bartol</h1>
+      <main>
+        <h3>El autor que inspiró al videojuego "Assassins Creed"</h3>
+
+        <p>Vladimir Bartol fue un escritor esloveno nacido en 1903 y fallecido en 1967. Aunque escribió varias obras, su trabajo más conocido es la novela "Alamut", publicada en 1938. La obra se convirtió en un éxito de ventas y es considerada una de las obras más importantes de la literatura eslovena del siglo XX.</p>
+        <p>Bartol estudió en la Universidad de Ljubljana, donde se graduó en Filosofía y Lengua y Literatura eslovenas. Tras terminar sus estudios, se mudó a Trieste, donde trabajó como periodista y escritor. Durante la Segunda Guerra Mundial, se unió a la Resistencia y fue uno de los fundadores del Partido Comunista esloveno.</p>
+        <p>Aunque Bartol escribió varias obras, ninguna de ellas tuvo el éxito de "Alamut". La novela cuenta la historia de un líder musulmán del siglo XI que crea una secta con la que controla a sus seguidores mediante la manipulación de la realidad y la promesa de recompensas en la vida después de la muerte. La obra ha sido comparada con "1984" de George Orwell y "Un mundo feliz" de Aldous Huxley por su crítica a la manipulación y el control de la realidad.</p>
+      </main>
+
+  </body>
+        
+</html>
+-->
+
+
+
+<!--
+  IMAGENES
+  =================================
+  ¡Bien! Con lo que sigue ya le vamos dando forma a nuestra página web.
+  Aprendamos a colocar imagenes.
+
+  Se coloca:
+  <img src = "https://link_de_la_imagen.com">
+  Cabe aclarar que la etiqueta <img> no lleva etiqueta de cierre, se cierra automáticamente.
+
+  Colocando al lado los atributos "width"("ancho") y "height"("alto") podemos modificar
+  el tamaño de la imagen.
+
+  Se coloca:
+  <img src = "https://link_de_la_imagen.com" width = "ancho deseado" height = "alto deseado">
+
+  Cuando la imagen no se carga, podemos poner un texto que la describa en su lugar (esto te lo
+  van a agradecer mucho los que tienen una conexión lenta). Para ello ponemos alt = "texto".
+
+  Se coloca:
+  <img src = "https://link_de_la_imagen.com" alt = "texto deseado">
+
+  Otra cosa que podemos hacer es colocar una imagen que tenemos en la computadora. Solo tenemos
+  que abrir la carpeta donde esta se encuentra desde el programa que estemos usando para 
+  programar el código. Luego debemos colocar lo siguiente donde queremos que vaya la imagen:
+
+  <img src = "nombre de imagen.formato_de_imagen"> 
+
+  En caso de que la imagen este en otra carpeta, colocar:
+  <img src = "nombre de carpeta/nombre de imagen.formato_de_imagen"> 
+
+
+-->
+
+<!--
+  
+<!DOCTYPE html>
+
+<html lang = "es">  
+
+  <body>
+      <h1>Breve biografía sobre Vladimir Bartol</h1>
+      <main>
+        <h3>El autor que inspiró al videojuego "Assassins Creed"</h3>
+
+        <p>Vladimir Bartol fue un escritor esloveno nacido en 1903 y fallecido en 1967. Aunque escribió varias obras, su trabajo más conocido es la novela "Alamut", publicada en 1938. La obra se convirtió en un éxito de ventas y es considerada una de las obras más importantes de la literatura eslovena del siglo XX.</p>
+        <img src = "https://idsb.tmgrup.com.tr/ly/uploads/images/2022/09/13/230594.jpeg" alt="Captura in-game de Assassins Creed: Mirage." width = "720" height = "480" >
+        <p>Bartol estudió en la Universidad de Ljubljana, donde se graduó en Filosofía y Lengua y Literatura eslovenas. Tras terminar sus estudios, se mudó a Trieste, donde trabajó como periodista y escritor. Durante la Segunda Guerra Mundial, se unió a la Resistencia y fue uno de los fundadores del Partido Comunista esloveno.</p>
+        <p>Aunque Bartol escribió varias obras, ninguna de ellas tuvo el éxito de "Alamut". La novela cuenta la historia de un líder musulmán del siglo XI que crea una secta con la que controla a sus seguidores mediante la manipulación de la realidad y la promesa de recompensas en la vida después de la muerte. La obra ha sido comparada con "1984" de George Orwell y "Un mundo feliz" de Aldous Huxley por su crítica a la manipulación y el control de la realidad.</p>
+        <img src = "imagen de prueba.jpg" alt="La fortaleza Alamut ('Nido de águilas') en la actualidad" width = "720" height = "480">
+      </main>
+
+  </body>
+        
+</html>
+-->
+
+
+
+<!--
+  CREAR ENLACES EXTERNOS
+  =========================================
+  Podemos convertir una parte de nuestro texto en un enlace a otra página. Ya saben, cuando
+  sale una parte del texto en azul, lo clickeas y te lleva a otro lado. La etiqeta de 
+  enlace es <a href = "">.
+
+  Se coloca:
+  <a href = "https://link.com">Texto</a>
+
+  También podemos añadir un atributo que especifique dónde queremos que se abra ese enlace. 
+  Es el atributo Target.
+  Por ejemlpo, si queremos que el enlace se abra en otra pestaña colocamos:
+  <a href = "https://link.com" target = "_blank">Texto</a>
+
+  Luego puedes curiosear e investigar qué otros targets se pueden usar.
+
+  Y una cosa más, se recomienda usar el atributo "rel" para prevenir un ataque llamado
+  Tabnabbing, donde se reemplaza el enlace de destino y te envían a uno donde le piden
+  los datos al usuario.
+
+  Se coloca:
+  <a href = "https://link.com" rel = "noopener noreferrer">Texto</a>
+-->
+
+<!--
+
+<!DOCTYPE html>
+
+<html lang = "es">  
+
+  <body>
+      <h1>Breve biografía sobre Vladimir Bartol</h1>
+      <main>
+        <h3>El autor que inspiró al videojuego "Assassins Creed"</h3>
+
+        <p>Vladimir Bartol fue un escritor esloveno nacido en 1903 y fallecido en 1967. Aunque escribió varias obras, su trabajo más conocido es la novela "Alamut", publicada en 1938. La obra se convirtió en un éxito de ventas y es considerada una de las obras más importantes de la literatura eslovena del siglo XX.</p>
+        <img src = "https://idsb.tmgrup.com.tr/ly/uploads/images/2022/09/13/230594.jpeg" alt="Captura in-game de Assassins Creed: Mirage." width = "720" height = "480" >
+        <p>Bartol estudió en la Universidad de Ljubljana, donde se graduó en Filosofía y Lengua y Literatura eslovenas. Tras terminar sus estudios, se mudó a Trieste, donde trabajó como periodista y escritor. Durante la Segunda Guerra Mundial, se unió a la Resistencia y fue uno de los fundadores del Partido Comunista esloveno.</p>
+        <p>Aunque Bartol escribió varias obras, ninguna de ellas tuvo el éxito de "Alamut". La novela cuenta la historia de un líder musulmán del siglo XI que <a href="https://historia.nationalgeographic.com.es/a/legendarios-guerreros-alamut-secta-asesinos_11317" target="_blank" rel="noopener noreferrer">crea una secta</a> con la que controla a sus seguidores mediante la manipulación de la realidad y la promesa de recompensas en la vida después de la muerte. La obra ha sido comparada con "1984" de George Orwell y "Un mundo feliz" de Aldous Huxley por su crítica a la manipulación y el control de la realidad.</p>
+        <img src = "imagen de prueba.jpg" alt="La fortaleza Alamut ('Nido de águilas') en la actualidad" width = "720" height = "480">
+      </main>
+
+  </body>
+        
+</html>
+-->
+
+
+
+<!--
+  ENLACES A SECCIONES INTERNAS
+  ===============================================
+  Antes vimos cómo crear un enlace que nos lleve a otra página web ¿Pero qué pasa si queremos 
+  hacer un enlace que nos lleve a otra parte de nuestra página?
+
+  Pues es fácil, se hace en 2 etapas. Debemos saber dónde queremos poner nuestro enlace y cuál
+  será nuestro destino. Para el enlace usamos la etiqueta <a></a> y para nuestro destino el atributo id.
+
+  Se coloca:
+  <a href="#enlace-1">Texto</a>  ESTO ES EN EL ENLACE
+  <tipo_de_etiqueta id="enlace-1">texto o imagen</tipo_de_etiqueta>
+-->
+
+<!--
+  
+<!DOCTYPE html>
+
+<html lang = "es">  
+
+  <body>
+      <h1>Breve biografía sobre Vladimir Bartol</h1>
+      <main>
+        <h3>El autor que inspiró al videojuego <a href="#enlace-1">"Assassins Creed"</a></h3>
+
+        <p>Vladimir Bartol fue un escritor esloveno nacido en 1903 y fallecido en 1967. Aunque escribió varias obras, su trabajo más conocido es la novela "Alamut", publicada en 1938. La obra se convirtió en un éxito de ventas y es considerada una de las obras más importantes de la literatura eslovena del siglo XX.</p>
+        <img src = "https://idsb.tmgrup.com.tr/ly/uploads/images/2022/09/13/230594.jpeg" alt="Captura in-game de Assassins Creed: Mirage." width = "720" height = "480" >
+        <p>Bartol estudió en la Universidad de Ljubljana, donde se graduó en Filosofía y Lengua y Literatura eslovenas. Tras terminar sus estudios, se mudó a Trieste, donde trabajó como periodista y escritor. Durante la Segunda Guerra Mundial, se unió a la Resistencia y fue uno de los fundadores del Partido Comunista esloveno.</p>
+        <p>Aunque Bartol escribió varias obras, ninguna de ellas tuvo el éxito de "Alamut". La novela cuenta la historia de un líder musulmán del siglo XI que <a href="https://historia.nationalgeographic.com.es/a/legendarios-guerreros-alamut-secta-asesinos_11317" target="_blank" rel="noopener noreferrer">crea una secta</a> con la que controla a sus seguidores mediante la manipulación de la realidad y la promesa de recompensas en la vida después de la muerte. La obra ha sido comparada con "1984" de George Orwell y "Un mundo feliz" de Aldous Huxley por su crítica a la manipulación y el control de la realidad.</p>
+        <img id="enlace-1" src ="imagen de prueba.jpg" alt="La fortaleza Alamut ('Nido de águilas') en la actualidad" width="720" height="480">
+      </main>
+
+  </body>
+        
+</html>
+-->
