@@ -147,9 +147,11 @@ Eso no tiene sentido.
 Para este tipo de casos existen los constructores, que no son más que funciones que nos
 permiten generar objetos automáticamente.
 
-En otros lenguajes a esta palabra clave (constructor) se le llama "Class", que permite a 
-partir de una especie de plantilla generar más objetos. En otros lenguajes la palabra Class
-permite crear un objeto con sus propiedades y a raíz de ese objeto va creando nuevos.
+Esta palabra clave (constructor) permite a partir de una especie de plantilla generar 
+más objetos. 
+
+En otros lenguajes la palabra "class" permite crear un objeto con sus propiedades y a raíz 
+de ese objeto va creando nuevos.
 
 La función constructor tendrá una tarea muy similar.
 
@@ -239,12 +241,15 @@ console.log (user2.mostrar());
  Para eso existe la palabra clave "prototype". 
 
  Una vez ya creado el constructor, podemos añadirle cosas llamándolo y colocando
- ".prototype.la_funcion_o_dato_que_quiero_agregar".
+ "nombre_de_constructor.prototype.nombre_de_la_funcion_o_dato_que_quiero_agregar".
+
+ NOTA: al nombre de la función o dato que quiero agregar le puedes el nombre, ya que 
+ tu mismo definirás la acción que va a realizar.
 
  Veamos un ejemplo tomando como referencia el ejemplo anterior. Supongamos que a los
  nombres quiero añadirles antes un "Nombre de Paciente: "
  
- 
+
  function Plantilla (nomb, apell, edad)
 {
     this.nomb = nomb
@@ -256,24 +261,83 @@ console.log (user2.mostrar());
     }
 }
 
-Plantilla.prototype.present = function ()
+Plantilla.prototype.presentacion = function ()
 {
     return `Nombre de paciente: ${this.nomb} ${this.apell} \nEdad: ${this.edad} años` 
 }   
 
 const user1 = new Plantilla ("Arturo", "Casares", 34);
-console.log (user1.present());
+console.log (user1.presentacion());
 
 const user2 = new Plantilla ("Alejandra", "Pascarelli", 22);
-console.log (user2.present());
+console.log (user2.presentacion());
 
 
 
 NOTA: Usando "\n" colocamos un salto de línea.
+ */
 
 
+
+/*
+CLASS
+=====================================================================================
+
+Se dice que Javascript no es un lenguaje orientado a objetos porque no tiene la palabra
+clave "class", que se utiliza en otros lenguajes orientados a objetos como Java y C++.
+
+Básicamente class actúa como una plantilla y define el comportamiento y las características
+de un objeto. Osea que hace exactamente lo mismo que un objeto constructor. No es más que 
+otra forma de ordenar nuestras funciones.
+
+Ahora, para utilizarla, debo crearla como un objeto. Defino el objeto con el tipo "class", 
+le doy un nombre y entre las {} coloco el constructor para crear una plantilla y listo.
 */
 
+
+
+
+/*
+¿Qué hace entonces que un lenguaje sea orientado a objetos?
+==========================================================================================
+
+Para que un lenguaje sea pueda modelar problemas a través de objetos debe cumplir con 2 cosas.
+La primera consiste en la capacidad de describir la realidad usando objetos y relacionándolos.
+Dicha capacidad consiste en cumplir con las siguientes características:
+
+ASOCIACIÓN:
+    La asociación permite unir dos objetos y enlazarlos en código.
+
+AGREGACIÓN:
+    La agregación habla de la capacidad de un objeto para referir a otros objetos indepen-
+    -dientes. Es decir, yo puedo crear un objeto grande con objetos pequeños dentro y si
+    saco esos objetos pequeños funcionarán como objetos independientes en mi código.
+
+COMPOSICIÓN:
+    La composición habla de la capacidad de un objeto para referir a otros objetos depen-
+    -dientes. Imaginemos un objeto grande conformado por múltiples objetos pequeños. Si 
+    saco uno, este no funcionará de manera independiente en el código.
+
+
+La segunda consiste en la capacidad de garantizar la modularidad (la posibilidad de subdividir
+el código en partes más pequeñas, siendo todas funcionales de forma independiente del resto) y 
+la reutilización de código.
+Este segundo requerimiento consiste en los siguientes principios:
+
+ENCAPSULACIÓN:
+    La encapsulación consiste en ocultar data y código dentro de una entidad para que esta pueda
+    ser fácilmente manipulada. De tal manera funcionan muchos objetos de la realidad, como un auto,
+    que es de manejo súper accesible, pero tiene muchos mecanismos internos a los cuales el usuario
+    no suele tener que acceder para manipularlo.
+
+HERENCIA:
+    La herencia permite crear un objetos a partir de características de otros objetos. Pensemos otra
+    vez en la vida real, cuando tenemos un hijo y este hereda características de ambos progenitores.
+
+POLIMORFISMO:
+    El polimorfismo es la capacidad de, a partir de un mismo método/función se puedan obtener respuestas
+    diferentes.
+*/
 
 
 
