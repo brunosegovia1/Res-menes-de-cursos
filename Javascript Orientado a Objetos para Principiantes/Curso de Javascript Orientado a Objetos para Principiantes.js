@@ -291,7 +291,58 @@ de un objeto. Osea que hace exactamente lo mismo que un objeto constructor. No e
 otra forma de ordenar nuestras funciones.
 
 Ahora, para utilizarla, debo crearla como un objeto. Defino el objeto con el tipo "class", 
-le doy un nombre y entre las {} coloco el constructor para crear una plantilla y listo.
+le doy un nombre y entre las {} coloco el constructor, UTILIZANDO LA PALABRA CLAVE "constructor"
+para crear una plantilla y listo.
+
+Veamos las dos formas de crear un objeto, con class y sin class:
+
+CON CLASS:
+
+class plantilla 
+{
+    constructor (user1)
+    {
+        this.cosa = user1;
+    }
+}
+
+const user1 = new plantilla ('cosa');
+
+console.log(user1);
+
+
+NOTA: cuando uso class, si yo creo un objeto nuevo llamando a la clase y lo coloco antes de la clase, dará error. Ejemplo a continuación:
+
+const user1 = new plantilla ('cosa');
+
+class plantilla 
+{
+    constructor (user1)
+    {
+        this.cosa = user1;
+    }
+}
+
+
+console.log(user1);
+
+
+VM449:1 Uncaught ReferenceError: plantilla is not defined
+
+
+
+
+
+SIN CLASS:
+
+function ()
+{
+    this.cosa;
+}
+
+const user1 = 'cosa';
+
+console.log(user1);
 */
 
 
@@ -341,3 +392,34 @@ POLIMORFISMO:
 
 
 
+
+/*
+ASOCIACIÓN
+=======================================================================================================
+
+Si yo creo dos objetos: John y María; y a uno de estos objetos, sea María, le coloco ".parent = John", el
+código detectará que John es el padre de María. Entonces cuando imprima el objeto María en la consola nos
+saldrá que su padre es John.
+
+Veamoslo directamente en código:
+
+
+class persona
+{
+    constructor (user1)
+    {
+        this.nomb = user1;
+    }
+}
+function persona (user1)
+{
+this.nomb = user1;
+} 
+
+
+const user2 = new persona('John');
+const user1 = new persona('María');
+user1.parent = user2;
+
+console.log(user1);
+*/
