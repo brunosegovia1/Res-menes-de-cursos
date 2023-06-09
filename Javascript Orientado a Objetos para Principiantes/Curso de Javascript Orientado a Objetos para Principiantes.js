@@ -382,7 +382,7 @@ ENCAPSULACIÓN:
     no suele tener que acceder para manipularlo.
 
 HERENCIA:
-    La herencia permite crear un objetos a partir de características de otros objetos. Pensemos otra
+    La herencia permite crear un objeto a partir de características de otros objetos. Pensemos otra
     vez en la vida real, cuando tenemos un hijo y este hereda características de ambos progenitores.
 
 POLIMORFISMO:
@@ -411,11 +411,6 @@ class persona
         this.nomb = user1;
     }
 }
-function persona (user1)
-{
-this.nomb = user1;
-} 
-
 
 const user2 = new persona('John');
 const user1 = new persona('María');
@@ -423,3 +418,212 @@ user1.parent = user2;
 
 console.log(user1);
 */
+
+
+
+
+/*
+AGREGACIÓN
+========================================================================
+
+La agregación consiste en relacionar componentes del mismo código que aún separados
+puedan funcionar de forma independiente cada uno.
+
+Veamos un ejemplo usando un push en el código anterior:
+
+
+const Empresa =
+{
+    nombre: "Mansa compañía",
+    empleados: []
+}
+
+class persona
+{
+    constructor (user1)
+    {
+        this.nomb = user1;
+    }
+}
+
+const user2 = new persona('John');
+const user1 = new persona('María');
+user1.parent = user2;
+
+console.log(user1);
+
+Empresa.empleados.push(user1, user2)
+console.log (Empresa.empleados)
+*/
+
+
+
+
+/*
+COMPOSICIÓN
+=======================================================================
+
+La composición, opuesto a la agregación, consiste en relacionar un objeto 
+con otro que sea totalmente dependiente de este. 
+Un ejemplo de esto son las propiedades dentro de los objetos:
+
+const persona =
+{
+    nombre: "Carlos",
+    apellido: "Pérez",
+    dirección:
+    {
+        calle: "123 baker street",
+        provincia: "Entre Ríos",
+        País: "Argentina"
+    }
+}
+
+Si quitamos alguna de las propiedades como la dirección o el nombre estas 
+pierden el sentido y no tenemos qué uso darles.
+*/
+
+
+
+
+/*
+ENCAPSULACIÓN
+=======================================================================
+
+La encapsulación consiste en simplificar el uso de un objeto. El usuario
+no tiene que saber cómo funciona internamente, solo debe saber que funciona.
+
+Cuando hacemos encapsulamiento logramos que el usuario no tenga acceso directo
+al objeto, sino que nosotros le damos funciones para que pueda acceder a traves
+de ellas. Es decir, solo modifica del objeto lo que nosotros le permitimos a 
+traves de un intermediario.
+
+Para hacer un encapsulamiento debo simplemente crear un constructor, crear en él 
+las variables que necesito y utilizar "this" para crear funciones que le den
+acceso al usuario.
+
+Veamos un ejemplo:
+
+function empresa (nombre)
+{
+    let empleados = [];
+
+    this.nombreempresa = nombre;
+
+    this.mostraremp = function ()
+    {
+        return empleados;
+    }
+
+    this.añadiremp = function (nuevo)
+    {
+        empleados.push(nuevo);
+    }
+}
+
+const Pepsico = new empresa ("Pepsico");
+
+console.log(Pepsico);
+
+Pepsico.añadiremp("Bruno");
+Pepsico.mostraremp();
+*/
+
+
+
+
+
+/*
+HERENCIA 
+========================================================================
+
+La herencia consiste en crear objetos especializados a partir de uno más
+genérico. Es decir, crearé objeto que, a pesar de ser distintos de los demás,
+heredarán todas las propiedades de un objeto base.
+
+Ahora, hay dos formas distintas de hacer herencia en javascript. una es solo
+aplicable en este lenguaje y otra es aplicable en otros lenguajes orientados
+a objetos, como lo es Java.
+
+La primera forma es utilizando la palabra clave "prototype" para añadir todo
+lo que hay en un objeto a otro nuevo.
+
+Ejemplo:
+
+function Persona ()
+{
+    this.nomb = ''
+    this.apell = ''
+}
+
+function Programador ()
+{
+    this.lenguaje = ''
+}
+
+Programador.prototype = new Persona ()
+
+
+const usuario1 = new Persona ()
+usuario1.nomb = 'Anastacia'
+usuario1.apell = 'Nikolayevna'   
+
+const programador1 = new Programador ()
+programador1.nomb = 'Mara'
+programador1.apell = 'Estevez'   
+programador1.lenguaje = 'Java'  
+
+
+console.log (usuario1)
+console.log (programador1)
+
+
+
+
+La segunda forma sería usando una clase como plantilla. Creamos la clase 
+padre y luego en la clase que la herede colocamos: 
+
+"class nombredelaclasehijo extends nombredelaclasepadre
+{
+    constructor (parametroheredado1, parametroheredado2,..., parametronuevo1, parametronuevo2,...)"
+
+Luego, dentro de esta clase hijo, en el constructor, dejamos una línea de
+código para colocar la palabra "super". Esta nos permitirá heredar las 
+propiedades de la clase padre y si no la colocamos saltará error.
+Se escribe de la siguiente manera:
+
+super(parametroheredado1, parametroheredado2,...)
+
+
+Ahora un ejemplo del mismo código anterior pero aplicado de esta segunda
+forma:
+class Persona 
+{
+    constructor (nomb, apell)
+    {
+       this.nomb = nomb
+       this.apell = apell   
+    }
+}
+
+class Programador extends Persona
+{
+    constructor (nomb, apell, leng)
+    {
+        super(nomb,apell)
+        this.lenguaje = leng
+    }
+}
+
+
+const usuario1 = new Persona ('Anastacia', 'Nikolayevna')
+const programador1 = new Programador ('Mara', 'Estevez', 'Java')
+
+console.log (usuario1)
+console.log (programador1)
+*/
+
+
+
+
+
