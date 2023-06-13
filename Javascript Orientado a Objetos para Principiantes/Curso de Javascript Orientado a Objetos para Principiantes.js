@@ -626,4 +626,34 @@ console.log (programador1)
 
 
 
+/*
+POLIMORFISMO
+=============================================================================
+
+El porlimorfismo es la propiedad que permite crear distintas funciones de diferentes
+tipos a partir de una sola.
+
+Existen tres tipos de polimorfismo: la sobrecarga, el polimorfismo paramétrico y el
+polimorfismo de subtipos.
+*/
+
+/*
+SOBRECARGA
+==============================================================================
+
+La sobrecarga es la capacidad de enviar parámetros de tipos distintos a los que
+se supone que el método debe recibir. O también más  o menos parámetros de los 
+que pueda recibir.
+
+Para ello debo
+
+*/
+
+
+
+
+ 
+
+
+
 
