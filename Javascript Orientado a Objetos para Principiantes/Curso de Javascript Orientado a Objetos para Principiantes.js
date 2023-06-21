@@ -768,3 +768,12 @@ console.log(WriteFullname(Agusto))
 console.log(WriteFullname(Guillermo))
 */
 
+
+/*
+Bueno, he finalizado. Este es mi resumen del curso.
+
+Link para que lo vean ustedes:
+https://www.youtube.com/watch?v=N_t1A39IB_8&list=WL&index=23&t=4s
+
+GRACIAS POR TOMARSE EL TIEMPO!!! :D
+*/
