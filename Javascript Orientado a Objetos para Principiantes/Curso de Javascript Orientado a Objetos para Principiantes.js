@@ -645,15 +645,126 @@ La sobrecarga es la capacidad de enviar parámetros de tipos distintos a los que
 se supone que el método debe recibir. O también más  o menos parámetros de los 
 que pueda recibir.
 
-Para ello debo
+Por ejemplo, supongamos que quiero crear un método que cuente la cantidad de 
+dígitos que tiene un String o un número. Eso sería una sobrecarga, que indepen-
+-dientemente del tipo de dato que reciba, el método pueda devolver el mismo re-
+-sultado.
 
+Veamoslo aplicado:
+
+function CountItems (x)
+{
+    return x.toString().length
+}
+
+console.log(CounItems(3000))
+console.log(CounItems("Hola locooooo"))
+
+
+
+Ahora, como dijimos, la sobrecarga habla también acerca de la cantidad de pará-
+-metros que podemos pasar. Para conseguir pasar la cantidad que queramos, antes
+debemos crear el método y colocamos en él la cantidad máxima de parámetros que
+queremos que reciba y los igualamos a cero. De esta manera el método detectará
+que si no le pasamos un parámetro, este será cero.
+
+Ahora veamoslo:
+
+function Sum(x = 0, y = 0, z = 0)
+{
+    return x*y+z
+}
+
+console.log(Sum(10,20))
 */
 
 
 
 
- 
+/*
+POLIMORFISMO PARAMÉTRICO
+==================================================================================
+
+El polimorfismo paramétrico nos permite manejar distintos tipos de datos genéricos
+sin ningún tipo de dato específico, es decir, se crea un objeto que pueda funcionar 
+sin especificar dentro de él el  tipo de parámetro que va a recibir.
+
+Por supuesto que es confuso, pero este concepto se aplica a lenguajes orientados a
+objetos.
+
+Ahora veremos cómo se aplica este concepto en Javascript con un ejemplo:
+Supongamos que quiero ir llenando un distintos arreglos, cada uno con su propio tipo
+de datos apilados, pero quiero hacerlo utilizando un objeto
 
 
 
+class Stack 
+{
+    constructor (item)
+    {
+        this.item = []
+
+        this.push = function (item)
+        {
+            this.item.push(item);
+        }
+    }
+}
+
+const stack = new Stack ()
+stack.push(8)
+const stack2 = new Stack ()
+stack2.push("Holaaa")
+
+console.log (stack)
+console.log(stack2)
+*/
+
+
+
+
+/*
+POLIMORFISMO DE SUBTIPOS
+======================================================================
+
+En el polimorfismo de subtipos podemos crear funciones que reciban como
+parámetro cualquier tipo de dato, refiriéndonos no solo a enteros o 
+Strings, por ejemplo, sino también a clases.
+
+Veamos un ejemplo:
+
+
+
+class Person
+{
+    constructor (name, lastname)
+    {
+        this.name = name
+        this.lastname = lastname
+    }
+}
+
+class Programmer extends Person
+{
+    constructor (name, lastname, language)
+    {
+        super (name, lastname)
+        this.language = language
+    }
+}
+
+
+const Agusto = new Person ('Agusto', 'Rodríguez')
+console.log(Agusto)
+const Guillermo = new Programmer ('Guillermo', 'Codes', 'C++')
+console.log(Guillermo)
+
+function WriteFullname(p)
+{
+    return `${p.name} ${p.lastname}` 
+}
+
+console.log(WriteFullname(Agusto))
+console.log(WriteFullname(Guillermo))
+*/
 
