@@ -313,7 +313,7 @@ Se vería así:
 
   También podemos añadir un atributo que especifique dónde queremos que se abra ese enlace. 
   Es el atributo Target.
-  Por ejemlpo, si queremos que el enlace se abra en otra pestaña colocamos:
+  Por ejemlpo, si queremos que el enlace se abra en otra aña colocamos:
   <a href = "https://link.com" target = "_blank">Texto</a>
 
   Luego puedes curiosear e investigar qué otros targets se pueden usar.
@@ -355,7 +355,8 @@ Se vería así:
   ENLACES A SECCIONES INTERNAS
   ===============================================
   Antes vimos cómo crear un enlace que nos lleve a otra página web ¿Pero qué pasa si queremos 
-  hacer un enlace que nos lleve a otra parte de nuestra página?
+  hacer un enlace que nos lleve a otra parte de nuestra página? Como lo hace Wikipedia con sus
+  índices, por ejemplo.
 
   Pues es fácil, se hace en 2 etapas. Debemos saber dónde queremos poner nuestro enlace y cuál
   será nuestro destino. Para el enlace usamos la etiqueta <a></a> y para nuestro destino el atributo id.
@@ -380,10 +381,528 @@ Se vería así:
         <img src = "https://idsb.tmgrup.com.tr/ly/uploads/images/2022/09/13/230594.jpeg" alt="Captura in-game de Assassins Creed: Mirage." width = "720" height = "480" >
         <p>Bartol estudió en la Universidad de Ljubljana, donde se graduó en Filosofía y Lengua y Literatura eslovenas. Tras terminar sus estudios, se mudó a Trieste, donde trabajó como periodista y escritor. Durante la Segunda Guerra Mundial, se unió a la Resistencia y fue uno de los fundadores del Partido Comunista esloveno.</p>
         <p>Aunque Bartol escribió varias obras, ninguna de ellas tuvo el éxito de "Alamut". La novela cuenta la historia de un líder musulmán del siglo XI que <a href="https://historia.nationalgeographic.com.es/a/legendarios-guerreros-alamut-secta-asesinos_11317" target="_blank" rel="noopener noreferrer">crea una secta</a> con la que controla a sus seguidores mediante la manipulación de la realidad y la promesa de recompensas en la vida después de la muerte. La obra ha sido comparada con "1984" de George Orwell y "Un mundo feliz" de Aldous Huxley por su crítica a la manipulación y el control de la realidad.</p>
-        <img id="enlace-1" src ="imagen de prueba.jpg" alt="La fortaleza Alamut ('Nido de águilas') en la actualidad" width="720" height="480">
+        <img src ="imagen de prueba.jpg" alt="La fortaleza Alamut ('Nido de águilas') en la actualidad" width="720" height="480">
+        <p> <a id= "enlace-1">Assassin's Creed</a> es un galardonado videojuego de ficción histórica. La mayor parte del juego tiene lugar durante la Tercera Cruzada en Tierra Santa y la trama gira en torno a una secta conocida como la Orden Secreta de Hashshashin (Asesinos). El jugador es, en realidad, un hombre de hoy en día llamado Desmond Miles, el cual mediante el uso de una máquina llamada Animus, se permite la visualización y el control de la memoria genética de sus antepasados, en este caso, Altaïr Ibn-La 'Ahad, un miembro de los Asesinos. A través de esta trama, que emergen los detalles de una lucha entre dos grupos, los caballeros templarios y los nizaríes (asesinos), para conseguir un artefacto poderoso conocido como "Fruto del Edén", y tiene lugar principalmente durante la Tercera Cruzada en la Tierra Santa en 1191.</p>
       </main>
 
   </body>
         
 </html>
 -->
+
+
+
+<!--
+  ENLACES CON IMAGENES
+  =============================================================================
+  
+  Si queremos hacer clic en una imagen y que esta nos lleve a un enlace debemos
+  poner lo siguiente:
+
+  <a href="link_de_destino"><img src= "link_o_fuente_de_la_imagen"></a>
+
+  Y si queremos que esa imagen nos lleve a una nueva pestaña nueva colocamos:
+
+  <a href="link_de_destino" target= "_blank" ><img src= "link_o_fuente_de_la_imagen"></a>
+
+  Se vería así:
+
+
+
+<!DOCTYPE html>
+
+<html lang = "es">  
+
+  <body>
+      <h1>Breve biografía sobre Vladimir Bartol</h1>
+      <main>
+        <h3>El autor que inspiró al videojuego <a href="#enlace-1">"Assassins Creed"</a></h3>
+
+        <p>Vladimir Bartol fue un escritor esloveno nacido en 1903 y fallecido en 1967. Aunque escribió varias obras, su trabajo más conocido es la novela "Alamut", publicada en 1938. La obra se convirtió en un éxito de ventas y es considerada una de las obras más importantes de la literatura eslovena del siglo XX.</p>
+        <img src = "https://idsb.tmgrup.com.tr/ly/uploads/images/2022/09/13/230594.jpeg" alt="Captura in-game de Assassins Creed: Mirage." width = "720" height = "480" >
+        <p>Bartol estudió en la Universidad de Ljubljana, donde se graduó en Filosofía y Lengua y Literatura eslovenas. Tras terminar sus estudios, se mudó a Trieste, donde trabajó como periodista y escritor. Durante la Segunda Guerra Mundial, se unió a la Resistencia y fue uno de los fundadores del Partido Comunista esloveno.</p>
+        <p>Aunque Bartol escribió varias obras, ninguna de ellas tuvo el éxito de "Alamut". La novela cuenta la historia de un líder musulmán del siglo XI que <a href="https://historia.nationalgeographic.com.es/a/legendarios-guerreros-alamut-secta-asesinos_11317" target="_blank" rel="noopener noreferrer">crea una secta</a> con la que controla a sus seguidores mediante la manipulación de la realidad y la promesa de recompensas en la vida después de la muerte. La obra ha sido comparada con "1984" de George Orwell y "Un mundo feliz" de Aldous Huxley por su crítica a la manipulación y el control de la realidad.</p>
+        <img src ="imagen de prueba.jpg" alt="La fortaleza Alamut ('Nido de águilas') en la actualidad" width="720" height="480">
+        <p> <a id= "enlace-1">Assassin's Creed</a> es un galardonado videojuego de ficción histórica. La mayor parte del juego tiene lugar durante la Tercera Cruzada en Tierra Santa y la trama gira en torno a una secta conocida como la Orden Secreta de Hashshashin (Asesinos). El jugador es, en realidad, un hombre de hoy en día llamado Desmond Miles, el cual mediante el uso de una máquina llamada Animus, se permite la visualización y el control de la memoria genética de sus antepasados, en este caso, Altaïr Ibn-La 'Ahad, un miembro de los Asesinos. A través de esta trama, que emergen los detalles de una lucha entre dos grupos, los caballeros templarios y los nizaríes (asesinos), para conseguir un artefacto poderoso conocido como "Fruto del Edén", y tiene lugar principalmente durante la Tercera Cruzada en la Tierra Santa en 1191.</p>
+        <a href="https://www.ubisoft.com/es-mx/game/assassins-creed/assassins-creed" target = "_blank" rel= "noopener noreferrer"><img src= "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/STNA8wMcQAfHTiYAOGfCF/911ea4ecd43cfd8594ab597e8980351a/AC1_game_overview_1.jpg" ></a>
+      </main>
+
+  </body>
+        
+</html>
+-->
+
+
+
+<!--
+  LISTAS NO ORDENADAS
+  ==================================================================
+
+  Las listas no ordenadas son aquellas en las que hay ítems no enumerados.
+  Para hacer una debemos colocar lo siguiente:
+
+  <ul>   "ul" significa "unordered list"
+    <li>texto que queremos poner</li>   "li" significa "list item"
+    <li>texto que queremos poner</li>
+    <li>texto que queremos poner</li>
+  </ul>
+  
+
+  Veámoslo aplicado:
+
+<!DOCTYPE html>
+
+<html lang = "es">  
+
+  <body>
+      <h1>Breve biografía sobre Vladimir Bartol</h1>
+      <main>
+        <h3>El autor que inspiró al videojuego <a href="#enlace-1">"Assassins Creed"</a></h3>
+
+        <p>Vladimir Bartol fue un escritor esloveno nacido en 1903 y fallecido en 1967. Aunque escribió varias obras, su trabajo más conocido es la novela "Alamut", publicada en 1938. La obra se convirtió en un éxito de ventas y es considerada una de las obras más importantes de la literatura eslovena del siglo XX.</p>
+        <img src = "https://idsb.tmgrup.com.tr/ly/uploads/images/2022/09/13/230594.jpeg" alt="Captura in-game de Assassins Creed: Mirage." width = "720" height = "480" >
+        <p>Bartol estudió en la Universidad de Ljubljana, donde se graduó en Filosofía y Lengua y Literatura eslovenas. Tras terminar sus estudios, se mudó a Trieste, donde trabajó como periodista y escritor. Durante la Segunda Guerra Mundial, se unió a la Resistencia y fue uno de los fundadores del Partido Comunista esloveno.</p>
+        <p>Aunque Bartol escribió varias obras, ninguna de ellas tuvo el éxito de "Alamut". La novela cuenta la historia de un líder musulmán del siglo XI que <a href="https://historia.nationalgeographic.com.es/a/legendarios-guerreros-alamut-secta-asesinos_11317" target="_blank" rel="noopener noreferrer">crea una secta</a> con la que controla a sus seguidores mediante la manipulación de la realidad y la promesa de recompensas en la vida después de la muerte. La obra ha sido comparada con "1984" de George Orwell y "Un mundo feliz" de Aldous Huxley por su crítica a la manipulación y el control de la realidad.</p>
+        <img src ="imagen de prueba.jpg" alt="La fortaleza Alamut ('Nido de águilas') en la actualidad" width="720" height="480">
+        <p> <a id= "enlace-1">Assassin's Creed</a> es un galardonado videojuego de ficción histórica. La mayor parte del juego tiene lugar durante la Tercera Cruzada en Tierra Santa y la trama gira en torno a una secta conocida como la Orden Secreta de Hashshashin (Asesinos). El jugador es, en realidad, un hombre de hoy en día llamado Desmond Miles, el cual mediante el uso de una máquina llamada Animus, se permite la visualización y el control de la memoria genética de sus antepasados, en este caso, Altaïr Ibn-La 'Ahad, un miembro de los Asesinos. A través de esta trama, que emergen los detalles de una lucha entre dos grupos, los caballeros templarios y los nizaríes (asesinos), para conseguir un artefacto poderoso conocido como "Fruto del Edén", y tiene lugar principalmente durante la Tercera Cruzada en la Tierra Santa en 1191.</p>
+        <a href="https://www.ubisoft.com/es-mx/game/assassins-creed/assassins-creed" target = "_blank" rel= "noopener noreferrer"><img src= "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/STNA8wMcQAfHTiYAOGfCF/911ea4ecd43cfd8594ab597e8980351a/AC1_game_overview_1.jpg" ></a>
+       <p></p>
+        <h3>Ficha de "Alamut"</h3>
+        <ul>
+          <li>Género: Novela </li>
+          <li>Tema(s): Ficción histórica, aventuras, drama, romance, acción</li>
+          <li>Idioma: Esloveno</li>
+          <li>País: Eslovenia</li>
+          <li>Título original:	Alamut </li>
+          <li>Fecha de publicación: 1938</li>
+        </ul>
+      </main>
+
+  </body>
+        
+</html>
+-->
+
+
+
+
+<!--
+  LISTAS ORDENADAS
+  ============================================================
+
+  Las listas ordenadas son igual que las listas no ordenadas, con la
+  diferencia de que estas van enumeradas.
+
+  Se crean así:
+
+  <ol>   "ol" significa "ordered list"
+    <li>texto que queremos poner</li>  
+    <li>texto que queremos poner</li>
+    <li>texto que queremos poner</li>
+  </ol>
+-->
+
+
+
+<!--
+  ETIQUETA <strong>
+  =====================================================================
+
+  La etiqueta <strong> es utilizada para poner parte del texto en negrita.
+
+  Se coloca así:
+
+  <strong>texto que quiero ver en negrita</strong>
+
+
+  Veámoslo aplicado:
+
+<!DOCTYPE html>
+
+<html lang = "es">  
+
+  <body>
+      <h1>Breve biografía sobre Vladimir Bartol</h1>
+      <main>
+        <h3>El autor que inspiró al videojuego <a href="#enlace-1">"Assassins Creed"</a></h3>
+
+        <p>Vladimir Bartol fue un escritor esloveno nacido en 1903 y fallecido en 1967. Aunque escribió varias obras, su trabajo más conocido es la novela "Alamut", publicada en 1938. La obra se convirtió en un éxito de ventas y es considerada una de las obras más importantes de la literatura eslovena del siglo XX.</p>
+        <img src = "https://idsb.tmgrup.com.tr/ly/uploads/images/2022/09/13/230594.jpeg" alt="Captura in-game de Assassins Creed: Mirage." width = "720" height = "480" >
+        <p>Bartol estudió en la Universidad de Ljubljana, donde se graduó en Filosofía y Lengua y Literatura eslovenas. Tras terminar sus estudios, se mudó a Trieste, donde trabajó como periodista y escritor. Durante la Segunda Guerra Mundial, se unió a la Resistencia y fue uno de los fundadores del Partido Comunista esloveno.</p>
+        <p>Aunque Bartol escribió varias obras, ninguna de ellas tuvo el éxito de "Alamut". La novela cuenta la historia de un líder musulmán del siglo XI que <a href="https://historia.nationalgeographic.com.es/a/legendarios-guerreros-alamut-secta-asesinos_11317" target="_blank" rel="noopener noreferrer">crea una secta</a> con la que controla a sus seguidores mediante la manipulación de la realidad y la promesa de recompensas en la vida después de la muerte. La obra ha sido comparada con "1984" de George Orwell y "Un mundo feliz" de Aldous Huxley por su crítica a la manipulación y el control de la realidad.</p>
+        <img src ="imagen de prueba.jpg" alt="La fortaleza Alamut ('Nido de águilas') en la actualidad" width="720" height="480">
+        <p> <a id= "enlace-1">Assassin's Creed</a> es un galardonado videojuego de ficción histórica. La mayor parte del juego tiene lugar durante la Tercera Cruzada en Tierra Santa y la trama gira en torno a una secta conocida como la Orden Secreta de Hashshashin (Asesinos). El jugador es, en realidad, un hombre de hoy en día llamado Desmond Miles, el cual mediante el uso de una máquina llamada Animus, se permite la visualización y el control de la memoria genética de sus antepasados, en este caso, Altaïr Ibn-La 'Ahad, un miembro de los Asesinos. A través de esta trama, que emergen los detalles de una lucha entre dos grupos, los caballeros templarios y los nizaríes (asesinos), para conseguir un artefacto poderoso conocido como "Fruto del Edén", y tiene lugar principalmente durante la Tercera Cruzada en la Tierra Santa en 1191.</p>
+        <a href="https://www.ubisoft.com/es-mx/game/assassins-creed/assassins-creed" target = "_blank" rel= "noopener noreferrer"><img src= "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/STNA8wMcQAfHTiYAOGfCF/911ea4ecd43cfd8594ab597e8980351a/AC1_game_overview_1.jpg" ></a>
+       <p></p>
+        <h3>Ficha de "Alamut"</h3>
+        <ul>
+          <li>Género: Novela </li>
+          <li>Tema(s): Ficción histórica, aventuras, drama, romance, acción</li>
+          <li>Idioma: Esloveno</li>
+          <li>País: Eslovenia</li>
+          <li>Título original:	Alamut </li>
+          <li>Fecha de publicación: <strong>1938</strong></li>
+        </ul>
+      </main>
+
+  </body>
+        
+</html>
+-->
+
+
+
+<!--
+  TEXTO EN CURSIVA
+  ==================================================================
+
+  Para que parte del texto se muestre en letra cursiva debemos usar la 
+  etiqueta <em>.
+  
+  Se usa así:
+
+  <em>texto que queremos en cursiva</em>
+
+
+  Veámoslo aplicado:
+
+  <!DOCTYPE html>
+
+<html lang = "es">  
+
+  <body>
+      <h1>Breve biografía sobre <em>Vladimir Bartol</em></h1>
+      <main>
+        <h3>El autor que inspiró al videojuego <a href="#enlace-1"><em>"Assassins Creed"</em></a></h3>
+
+        <p>Vladimir Bartol fue un escritor esloveno nacido en 1903 y fallecido en 1967. Aunque escribió varias obras, su trabajo más conocido es la novela "Alamut", publicada en 1938. La obra se convirtió en un éxito de ventas y es considerada una de las obras más importantes de la literatura eslovena del siglo XX.</p>
+        <img src = "https://idsb.tmgrup.com.tr/ly/uploads/images/2022/09/13/230594.jpeg" alt="Captura in-game de Assassins Creed: Mirage." width = "720" height = "480" >
+        <p>Bartol estudió en la Universidad de Ljubljana, donde se graduó en Filosofía y Lengua y Literatura eslovenas. Tras terminar sus estudios, se mudó a Trieste, donde trabajó como periodista y escritor. Durante la Segunda Guerra Mundial, se unió a la Resistencia y fue uno de los fundadores del Partido Comunista esloveno.</p>
+        <p>Aunque Bartol escribió varias obras, ninguna de ellas tuvo el éxito de "Alamut". La novela cuenta la historia de un líder musulmán del siglo XI que <a href="https://historia.nationalgeographic.com.es/a/legendarios-guerreros-alamut-secta-asesinos_11317" target="_blank" rel="noopener noreferrer">crea una secta</a> con la que controla a sus seguidores mediante la manipulación de la realidad y la promesa de recompensas en la vida después de la muerte. La obra ha sido comparada con "1984" de George Orwell y "Un mundo feliz" de Aldous Huxley por su crítica a la manipulación y el control de la realidad.</p>
+        <img src ="imagen de prueba.jpg" alt="La fortaleza Alamut ('Nido de águilas') en la actualidad" width="720" height="480">
+        <p> <a id= "enlace-1">Assassin's Creed</a> es un galardonado videojuego de ficción histórica. La mayor parte del juego tiene lugar durante la Tercera Cruzada en Tierra Santa y la trama gira en torno a una secta conocida como la Orden Secreta de Hashshashin (Asesinos). El jugador es, en realidad, un hombre de hoy en día llamado Desmond Miles, el cual mediante el uso de una máquina llamada Animus, se permite la visualización y el control de la memoria genética de sus antepasados, en este caso, Altaïr Ibn-La 'Ahad, un miembro de los Asesinos. A través de esta trama, que emergen los detalles de una lucha entre dos grupos, los caballeros templarios y los nizaríes (asesinos), para conseguir un artefacto poderoso conocido como "Fruto del Edén", y tiene lugar principalmente durante la Tercera Cruzada en la Tierra Santa en 1191.</p>
+        <a href="https://www.ubisoft.com/es-mx/game/assassins-creed/assassins-creed" target = "_blank" rel= "noopener noreferrer"><img src= "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/STNA8wMcQAfHTiYAOGfCF/911ea4ecd43cfd8594ab597e8980351a/AC1_game_overview_1.jpg" ></a>
+       <p></p>
+        <h3>Ficha de "Alamut"</h3>
+        <ul>
+          <li>Género: Novela </li>
+          <li>Tema(s): Ficción histórica, aventuras, drama, romance, acción</li>
+          <li>Idioma: Esloveno</li>
+          <li>País: Eslovenia</li>
+          <li>Título original:	Alamut </li>
+          <li>Fecha de publicación: <strong>1938</strong></li>
+        </ul>
+      </main>
+
+  </body>
+        
+</html>
+-->
+
+
+
+<!--
+  TEXTO TACHADO
+  ==================================================================
+
+  Para tachar texto debemos utilizar la etiqueta <s>.
+
+  Se usa así:
+
+  <s>texto tachado</s>
+-->
+
+
+
+<!--
+  LÍNEA HORIZONTAL
+  ==================================================================
+
+  Las líneas horizontales pueden utilizarse para separar párrafos.
+
+  Se hacen así:
+
+  <hr>
+
+  "hr" viene del inglés, significa "horizontal rule"
+
+
+  Apliquémosla en lo que ya venimos creando:
+
+  <!DOCTYPE html>
+
+<html lang = "es">  
+
+  <body>
+      <h1>Breve biografía sobre <em>Vladimir Bartol</em></h1>
+      <main>
+        <h3>El autor que inspiró al videojuego <a href="#enlace-1"><em>"Assassins Creed"</em></a></h3>
+
+        <p>Vladimir Bartol fue un escritor esloveno nacido en 1903 y fallecido en 1967. Aunque escribió varias obras, su trabajo más conocido es la novela "Alamut", publicada en 1938. La obra se convirtió en un éxito de ventas y es considerada una de las obras más importantes de la literatura eslovena del siglo XX.</p>
+        <img src = "https://idsb.tmgrup.com.tr/ly/uploads/images/2022/09/13/230594.jpeg" alt="Captura in-game de Assassins Creed: Mirage." width = "720" height = "480" >
+        <p>Bartol estudió en la Universidad de Ljubljana, donde se graduó en Filosofía y Lengua y Literatura eslovenas. Tras terminar sus estudios, se mudó a Trieste, donde trabajó como periodista y escritor. Durante la Segunda Guerra Mundial, se unió a la Resistencia y fue uno de los fundadores del Partido Comunista esloveno.</p>
+        <p>Aunque Bartol escribió varias obras, ninguna de ellas tuvo el éxito de "Alamut". La novela cuenta la historia de un líder musulmán del siglo XI que <a href="https://historia.nationalgeographic.com.es/a/legendarios-guerreros-alamut-secta-asesinos_11317" target="_blank" rel="noopener noreferrer">crea una secta</a> con la que controla a sus seguidores mediante la manipulación de la realidad y la promesa de recompensas en la vida después de la muerte. La obra ha sido comparada con "1984" de George Orwell y "Un mundo feliz" de Aldous Huxley por su crítica a la manipulación y el control de la realidad.</p>
+        <img src ="imagen de prueba.jpg" alt="La fortaleza Alamut ('Nido de águilas') en la actualidad" width="720" height="480">
+        <p> <a id= "enlace-1">Assassin's Creed</a> es un galardonado videojuego de ficción histórica. La mayor parte del juego tiene lugar durante la Tercera Cruzada en Tierra Santa y la trama gira en torno a una secta conocida como la Orden Secreta de Hashshashin (Asesinos). El jugador es, en realidad, un hombre de hoy en día llamado Desmond Miles, el cual mediante el uso de una máquina llamada Animus, se permite la visualización y el control de la memoria genética de sus antepasados, en este caso, Altaïr Ibn-La 'Ahad, un miembro de los Asesinos. A través de esta trama, que emergen los detalles de una lucha entre dos grupos, los caballeros templarios y los nizaríes (asesinos), para conseguir un artefacto poderoso conocido como "Fruto del Edén", y tiene lugar principalmente durante la Tercera Cruzada en la Tierra Santa en 1191.</p>
+        <a href="https://www.ubisoft.com/es-mx/game/assassins-creed/assassins-creed" target = "_blank" rel= "noopener noreferrer"><img src= "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/STNA8wMcQAfHTiYAOGfCF/911ea4ecd43cfd8594ab597e8980351a/AC1_game_overview_1.jpg" ></a>
+       <hr>
+        <h3>Ficha de "Alamut"</h3>
+        <ul>
+          <li>Género: Novela </li>
+          <li>Tema(s): Ficción histórica, aventuras, drama, romance, acción</li>
+          <li>Idioma: Esloveno</li>
+          <li>País: Eslovenia</li>
+          <li>Título original:	Alamut </li>
+          <li>Fecha de publicación: <strong>1938</strong></li>
+        </ul>
+      </main>
+
+  </body>
+        
+</html>
+-->
+
+
+
+<!--
+  CREAR FORMULARIOS
+  ========================================================================
+  
+  Un formulario es un conjunto de controles (botones, cajas de texto, 
+  casillas de verificación, botones radio, etc) que permiten al usuario 
+  introducir datos y enviarlos al servidor web para su procesamiento.
+
+  Para crear un formulario utilizamos la etiqueta <form>. Se usa así:
+
+  <form>
+    formulario que vayamos a hacer
+  </form>
+
+
+  ELEMENTOS DENTRO DE UN FORMULARIO:
+
+  Input:
+  Input es un campo que vamos a usar para obtener un valor o una respuesta
+  del usuario. Por ejemplo, si queremos que el usuario ingrese texto, 
+  podemos asignar el tipo de input como "text". Se coloca así:
+
+  <input type= "text">
+
+  Colocando eso, se creará un campo donde el usuario pueda escribir.
+
+
+  Button:
+  Button crea una casilla donde el usuario puede hacer clic, para enviar o
+  recibir una respuesta. Es más, dentro del botón podemos colocar texto para
+  que el usuario entienda para qué sirve.
+  Si queremos que sea un texto que diga "Enviar" y cumpla con la función de
+  enviar, debemos colocarlo así:
+
+  <button type= "submit">Enviar</button>  "submit" significa "entregar"
+
+  Cuando usamos una de estas casillas, debemos también poner en la etiqueta <form>
+  el atributo "action", para indicar qué pasa cuando le hacemos clic. Se escribe así:
+
+  <form action="/dirección donde nos va a llevar la casilla">
+    <button type= "submit">Enviar</button>  
+  </form>
+
+
+  Placeholder:
+  ¿Vieron esos textos semitrasnparentes que salen en algunos cuadros de texto 
+  y que dicen algo como "Ingresa tu DNI", que desaparecen en cuanto comienzas
+  a escribir?
+  Bueno, eso es un placeholder y se coloca dentro del input, así:
+
+  <input type = "text" placeholder= "texto que queramos poner">
+
+-->
+
+
+
+<!--
+  HACER QUE UN CAMPO SEA OBLIGATORIO
+  ==============================================================================
+
+  En algunos documentos web, como los formularios de google drive, no puedes avanzar
+  si no llenas un campo en específico, te salta un mensaje que dice "este campo es
+  obligatorio". 
+  Bueno, eso lo hacemos con el atributo "required", así puedo hacer que un apartado de
+  botones de radio, casillas de verificación o llenar algún cuadro de texto sea obliga-
+  -torio. 
+  Veamos un ejemplo con un cuadro de texto:
+
+  <input type= "text" placeholder= "Url de tu trailer favorito de la saga" required>
+
+-->
+
+
+
+<!--
+  BOTONES DE RADIO
+  ================================================================================
+
+  Los botones de radio son los aquellos que debes marcar, como en los multiple choice.
+
+  Se crean con un input, como los cuadros de texto, pero con una variación, así:
+
+  <input type= "radio">Texto que le queramos poner al botón
+
+  
+  También podemos hacer que uno pueda hacer clic en el texto para marcar el 
+  botón de radio, lo que facilita la experiencia del usuario.
+  Se hace con la etiqueta <label>, así:
+
+  <label><input type= "radio">Texto que queramos poner</label>
+
+
+  A veces podemos tener un grupo de botones de radio y queremos que el usuario solo
+  pueda seleccionar uno. Eso lo hacemos agregando un atributo al elemento <input> de
+  tipo "radio". Ese atributo es "name" y colocándolo en cada uno de nuestros botones
+  hacemos que todos pertenezcan al mismo grupo, entonces solo se puede seleccionar uno
+  a la vez.
+
+  Se coloca así:
+  <label><input type= "radio" name="buttom">Texto que queramos poner</label>
+  <label><input type= "radio" name="buttom">Texto que queramos poner 1</label>
+  <label><input type= "radio" name="buttom">Texto que queramos poner 2</label>
+
+-->
+
+
+
+
+<!--
+  SALTO DE LÍNEA
+  =============================================================================
+
+  Ya aprendimos cómo colocar una línea horizontal que separe el documento, ahora,
+  de una forma muy parecida, aprenderemos a crear saltos de línea, que se hacen 
+  con la etiqueta <br>, que viene del inglés "break".
+
+  Se hace así:
+
+  <br>
+
+  Veamosla aplicada en los botones de radio:
+
+  <label><input type= "radio" name="buttom">Texto que queramos poner</label>
+  <br>
+  <label><input type= "radio" name="buttom">Texto que queramos poner 1</label>
+  <br>
+  <label><input type= "radio" name="buttom">Texto que queramos poner 2</label>
+  <br> 
+
+
+  No hace falta que le dediquemos una línea completa, también podemos colocarla
+  al final del elemento. Probémoslo y veámoslo aplicado:
+
+  <label><input type= "radio" name="seleccionar">Assassin's Creed (2007)</label><br>
+  <label><input type= "radio" name="seleccionar">Assassin's Creed II (2009)</label><br>
+  <label><input type= "radio" name="seleccionar">Assassin's Creed: Brotherhood (2010)</label><br>
+  <label><input type= "radio" name="seleccionar">Assassin's Creed: Revelations (2011)</label><br>
+  <label><input type= "radio" name="seleccionar">Assassin's Creed III (2012)</label><br>
+  <label><input type= "radio" name="seleccionar">Assassin's Creed IV: Black Flag (2013)</label><br>
+  <label><input type= "radio" name="seleccionar">Assassin's Creed: Rogue (2014)</label><br>
+  <label><input type= "radio" name="seleccionar">Assassin's Creed: Unity (2014)</label><br>
+  <label><input type= "radio" name="seleccionar">Assassin's Creed: Syndicate (2015)</label><br>
+  <label><input type= "radio" name="seleccionar">Assassin's Creed: Origins (2017)</label><br>
+  <label><input type= "radio" name="seleccionar">Assassin's Creed: Odyssey (2018)</label><br>
+  <label><input type= "radio" name="buttom">Assassin's Creed: Valhalla (2020)</label><br>
+  <label><input type= "radio" name="seleccionar">Assassin's Creed: Mirage (2023)</label><br>
+
+-->
+
+
+
+
+<!--
+  CASILLAS DE VERIFICACIÓN
+  ====================================================================================
+
+  Las casillas de verificación son otro tipo de elemento que podemos agregar a nuestro
+  formulario. En inglés se las denomina "Checkbox".
+
+  Son aquellas que se marcan con un tilde y sirven para chequear información. Se parecen
+  mucho a los button y hasta se colocan casi de la misma manera, con la diferencia de que
+  aunque agreguemos el atributo "name", siempre podremos elegir más de una casilla.
+
+  Veamos cómo se colocan:
+
+  <input type="checkbox">Texto que queramos poner
+
+  Para que se pueda seleccionar el texto, agrupar todas las casillas a un mismo tipo y
+  hacer que en estas haya saltos de línea debemos hacer lo mismo que con los button.
+  Quedaría así:
+
+  <label><input type="checkbox" name="select">Ficción histórica</label><br>
+
+
+
+
+-->
+
+<!DOCTYPE html>
+
+<html lang = "es">  
+
+  <body>
+      <!--TÍTULO-->
+      <h1>Breve biografía sobre <em>Vladimir Bartol</em></h1>
+      <main>
+      <!--SUBTÍTULO-->
+        <h3>El autor que inspiró al videojuego <a href="#enlace-1"><em>"Assassins Creed"</em></a></h3>
+        <!--TEXTO E IMÁGENES-->
+        <p>Vladimir Bartol fue un escritor esloveno nacido en 1903 y fallecido en 1967. Aunque escribió varias obras, su trabajo más conocido es la novela "Alamut", publicada en 1938. La obra se convirtió en un éxito de ventas y es considerada una de las obras más importantes de la literatura eslovena del siglo XX.</p>
+        <img src = "https://idsb.tmgrup.com.tr/ly/uploads/images/2022/09/13/230594.jpeg" alt="Captura in-game de Assassins Creed: Mirage." width = "720" height = "480" >
+        <p>Bartol estudió en la Universidad de Ljubljana, donde se graduó en Filosofía y Lengua y Literatura eslovenas. Tras terminar sus estudios, se mudó a Trieste, donde trabajó como periodista y escritor. Durante la Segunda Guerra Mundial, se unió a la Resistencia y fue uno de los fundadores del Partido Comunista esloveno.</p>
+        <p>Aunque Bartol escribió varias obras, ninguna de ellas tuvo el éxito de "Alamut". La novela cuenta la historia de un líder musulmán del siglo XI que <a href="https://historia.nationalgeographic.com.es/a/legendarios-guerreros-alamut-secta-asesinos_11317" target="_blank" rel="noopener noreferrer">crea una secta</a> con la que controla a sus seguidores mediante la manipulación de la realidad y la promesa de recompensas en la vida después de la muerte. La obra ha sido comparada con "1984" de George Orwell y "Un mundo feliz" de Aldous Huxley por su crítica a la manipulación y el control de la realidad.</p>
+        <img src ="imagen de prueba.jpg" alt="La fortaleza Alamut ('Nido de águilas') en la actualidad" width="720" height="480">
+        <p> <a id= "enlace-1">Assassin's Creed</a> es un galardonado videojuego de ficción histórica. La mayor parte del juego tiene lugar durante la Tercera Cruzada en Tierra Santa y la trama gira en torno a una secta conocida como la Orden Secreta de Hashshashin (Asesinos). El jugador es, en realidad, un hombre de hoy en día llamado Desmond Miles, el cual mediante el uso de una máquina llamada Animus, se permite la visualización y el control de la memoria genética de sus antepasados, en este caso, Altaïr Ibn-La 'Ahad, un miembro de los Asesinos. A través de esta trama, que emergen los detalles de una lucha entre dos grupos, los caballeros templarios y los nizaríes (asesinos), para conseguir un artefacto poderoso conocido como "Fruto del Edén", y tiene lugar principalmente durante la Tercera Cruzada en la Tierra Santa en 1191.</p>
+        <a href="https://www.ubisoft.com/es-mx/game/assassins-creed/assassins-creed" target = "_blank" rel= "noopener noreferrer"><img src= "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/STNA8wMcQAfHTiYAOGfCF/911ea4ecd43cfd8594ab597e8980351a/AC1_game_overview_1.jpg" ></a>
+       <p></p>
+        <h3>Ficha de "Alamut"</h3>
+        <ul>
+          <li>Género: Novela </li>
+          <li>Tema(s): Ficción histórica, aventuras, drama, romance, acción</li>
+          <li>Idioma: Esloveno</li>
+          <li>País: Eslovenia</li>
+          <li>Título original:	Alamut </li>
+          <li>Fecha de publicación: <strong>1938</strong></li>
+        </ul>
+        <!--FORMULARIO-->
+        <form action="/enviar-respuesta">
+          <!--Botones de radio-->
+          <p>Selecciona tu Assassin's Creed favorito:</p>
+          <label><input type= "radio" name="seleccionar">Assassin's Creed (2007)</label><br>
+          <label><input type= "radio" name="seleccionar">Assassin's Creed II (2009)</label><br>
+          <label><input type= "radio" name="seleccionar">Assassin's Creed: Brotherhood (2010)</label><br>
+          <label><input type= "radio" name="seleccionar">Assassin's Creed: Revelations (2011)</label><br>
+          <label><input type= "radio" name="seleccionar">Assassin's Creed III (2012)</label><br>
+          <label><input type= "radio" name="seleccionar">Assassin's Creed IV: Black Flag (2013)</label><br>
+          <label><input type= "radio" name="seleccionar">Assassin's Creed: Rogue (2014)</label><br>
+          <label><input type= "radio" name="seleccionar">Assassin's Creed: Unity (2014)</label><br>
+          <label><input type= "radio" name="seleccionar">Assassin's Creed: Syndicate (2015)</label><br>
+          <label><input type= "radio" name="seleccionar">Assassin's Creed: Origins (2017)</label><br>
+          <label><input type= "radio" name="seleccionar">Assassin's Creed: Odyssey (2018)</label><br>
+          <label><input type= "radio" name="seleccionar">Assassin's Creed: Valhalla (2020)</label><br>
+          <label><input type= "radio" name="seleccionar">Assassin's Creed: Mirage (2023)</label><br>
+          <!--Casillas de verificación-->
+          <p>Indica a qué géneros pertenece la saga (puedes seleccionar más de uno):</p>
+          <label><input type="checkbox" name="select">Ficción histórica</label><br>
+          <label><input type="checkbox" name="select">Ciencia ficción</label><br>
+          <label><input type="checkbox" name="select">Propaganda política</label><br>
+          <!--Texto y botón Enviar-->
+          <input type="text" placeholder="Url de tu trailer favorito"> <button type="submit">Enviar</button><br>
+        </form>
+      </main>
+
+  </body>
+        
+</html>
+
+
+
+
+
+
