@@ -1,6 +1,11 @@
 <!--
   ALT + Z para que el texto se adecúe a la ventana.
 -->
+
+
+<!--
+  HTML
+-->
 <!--
     DECLARACIÓN DEL ARCHIVO
     ==================================
@@ -837,22 +842,223 @@ Se vería así:
 
   <label><input type="checkbox" name="select">Ficción histórica</label><br>
 
+-->
 
 
+
+<!--
+  EL ATRIBUTO "CHECKED"
+  ========================================================================================
+
+  El atributo "checked" nos permite dejar marcada una casilla de verificación o un botón 
+  por defecto, para que el usuario sepa con más certeza que esas casillas y botones pueden
+  (o deben, según el caso) ser marcados.
+
+  Solo hay que agregarlo en el input, así, por ejemplo:
+
+  <label><input type="checkbox" name="select" checked>Ficción histórica</label><br>
+-->
+
+
+
+
+<!--
+  EL ATRIBUTO "VALUE"
+  ============================================================================================
+
+  El atributo "value" indica qué valor se va a enviar al servidor cuando enviemos la respuesta.
+
+  Se coloca dentro del <input> y se le pone el mismo texto que se le colocó a ese botón o casilla,
+  pero sin acentos, por ejemplo así:
+
+  <label><input type="checkbox" name="select" value="ficcion historica">Ficción histórica</label><br>
+
+
+  Si no colocamos "value" el servidor simplemente detectará que una opción fue seleccionada, 
+  no detectará el campo específico que elegimos.
+-->
+
+
+
+
+<!--
+  ELEMENTOS <div>
+  ==============================================================================================
+
+  El elemento <div> funciona como un contenedor genérico para personalizar una parte del documento.
+
+  tan solo tenemos que encerrar la parte que queremos perzonalizar dentro de la etiqueta <div></div>.
+
+  Así:
+
+  <div>
+    parte del documento personalizada
+  </div>
+-->
+
+
+
+<!--
+  PIE DE PÁGINA y LETRA PEQUEÑA
+  =============================================================================================
+
+  El pie de página de una página es una sección ubicada debajo del texto principal o cuerpo. 
+  Normalmente se utiliza como espacio para el número de página, pero podemos colocar otras cosas.
+
+  Siempre se coloca después del <main>, usando la etiqueta <footer> y dentro de ella poniendo un
+  párrafo (<p>), así:
+  
+  <footer>
+    <p>Pie de página</p>
+  </footer>
+  
+  Eso sí, el pie de página tendrá el mismo tamaño que el texto principal. Para cambiarlo debemos
+  usar la etiqueta <small>, así:
+
+  <footer>
+    <p><small>Pie de página</small></p>
+  </footer> 
+-->
+
+
+
+<!--
+  HEAD
+  =============================================================================================
+
+  <head> normalmente lo escribimos antes de <body>. <body> indica todo lo que podemos ver en la
+  página, mientras head son todos los elementos que actúan detras de escena, lo que sería la 
+  Metadata. 
+  
+  Se coloca así:
+
+  <head>
+    Por ejemplo, si necesitamos incluir un archivo CSS o Javascript en nuestra página, aquí 
+    colocaríamos el enlace.
+  </head>
+
+  Es más, si queremos modificar el título que se ve de nuestra página en el texto de la pestaña,
+  podemos hacerlo dentro de <head>, con la etiqueta <title>, así:
+
+  <head>
+    <title>Título</title>
+  </head>
+  
+  NOTA: SE RECOMIENDA ESCRIBIR TÍTULOS DETALLADOS, YA QUE INFLUYE MUCHO EN LOS MOTORES DE BÚSQUEDA
+  WEB.
+-->
+
+
+<!--
+  ¡BUEN TRABAJO! COMPLETASTE TODO LO QUE CORRESPONDE A HTML DE ESTE CURSO. ESTO YA ES UN GRAN AVANCE.
+-->
+
+
+
+
+
+
+
+<!--
+  CSS
+-->
+
+<!--
+  3 OPCIONES PARA CSS
+  ======================================================================================
+  
+  CSS es un lenguaje basado en reglas y esas reglas determinarán el estilo que se aplica-
+  -rá a un elemento o a un grupo de elementos.
+
+  Tenemos 3 opciones distintas para escribir nuestro conjunto de reglas en CSS:
+
+      1) Escribir Estilos en Línea
+      2) Usar un bloque <style></style>
+      3) Archivo .css
 
 -->
 
+
+
+<!--
+  ESTILOS EN LÍNEA
+  =========================================================================================
+  1- Se especifica el estilo que quiero para la parte del documento en la etiqueta de aper-
+    -tura. Por ejemplo:
+
+  <h3 style="color: blue">Subtítulo<a href="#enlace-1"><em>"Parte del subtítulo en cursiva"</em></a></h3>
+-->
+
+
+
+<!--
+  ELEMENTO <style>
+  ========================================================================
+
+  2- Añadimos el elemento <style> en la etiqueta <head>. Dentro de ese ele-
+    -mento tendremos algo que se llama    un selector CSS, que nos permite 
+    modificar la parte del documento que queramos. Entendámoslo mejor con
+    un ejemplo:
+
+  <head>
+    <style>
+      h1            //CON ESTO DECIMOS QUE TODOS LOS ELEMENTOS CON LA ETIQUETA DE APERTURA H3 SERÁN DE COLOR AZUL
+      {
+        color: red;
+      }
+                    //SEGÚN LA GUÍA DE ESTILO DE GOOGLE SE RECOMIENDA DEJAR UNA LÍNEA EN BLANCO ENTRE CADA REGLA
+      h3             
+      {
+        color: blue;
+      }
+    </style>
+  </head>
+-->
+
+
+
+<!--
+  ARCHIVO .CSS
+  ===============================================================================
+
+  3- Vamos a tener la estructura y el contenido de nuestro documento en nuestro 
+    archivo HTML y por otro lado vamos a tener un archivo CSS donde indicaremos 
+    todo el estilo que le daremos a nuestra página.
+
+  A continuación dejo un tutorial de cómo crear nuestro archivo Css y vincularlo 
+  con el html en Visual Studio Code.
+
+  -Con nuestro html abierto, nos vamos al explorador, que son las dos carpetas 
+   juntas en la parte de arriba a la izquierda.
+  -Le damos a new file (la carpeta con el signo "+").
+  -Se nos abrirá una nueva pestaña vacía y nos saldrá un texto que nos permite
+   seleccionar lenguaje. Apretamos las palabras "Select language".
+  -Guardamos nuestro archivo en la misma carpeta que el html.
+  -En html, arriba del body, creamos la etiqueta <head> y dentro de ella ponemos
+   <link href="Nombre de nuestro archivo CSS.css" rel="stylesheet">
+
+  NOTA: rel viene del inglés "relationship" y stylesheet significa "Hoja de estilo".
+  Este atributo con dicha especificación le hace saber al código html de qué manera
+  afectará el vínculo.
+-->
 <!DOCTYPE html>
 
 <html lang = "es">  
-
+  <!--Metadata-->
+  <head>
+    <title>El libro que inspiró Assassin's Creed</title>
+    <link href="Alamut estilo visual.css" rel="stylesheet">
+  </head>
+  <!--Body-->
   <body>
       <!--TÍTULO-->
-      <h1>Breve biografía sobre <em>Vladimir Bartol</em></h1>
-      <main>
-      <!--SUBTÍTULO-->
-        <h3>El autor que inspiró al videojuego <a href="#enlace-1"><em>"Assassins Creed"</em></a></h3>
-        <!--TEXTO E IMÁGENES-->
+      <div>
+        <h1>Breve biografía sobre <em>Vladimir Bartol</em></h1>
+        <main>
+        <!--SUBTÍTULO-->
+          <h3>El autor que inspiró al videojuego <a href="#enlace-1"><em>"Assassins Creed"</em></a></h3>
+      </div>
+              <!--TEXTO E IMÁGENES-->
         <p>Vladimir Bartol fue un escritor esloveno nacido en 1903 y fallecido en 1967. Aunque escribió varias obras, su trabajo más conocido es la novela "Alamut", publicada en 1938. La obra se convirtió en un éxito de ventas y es considerada una de las obras más importantes de la literatura eslovena del siglo XX.</p>
         <img src = "https://idsb.tmgrup.com.tr/ly/uploads/images/2022/09/13/230594.jpeg" alt="Captura in-game de Assassins Creed: Mirage." width = "720" height = "480" >
         <p>Bartol estudió en la Universidad de Ljubljana, donde se graduó en Filosofía y Lengua y Literatura eslovenas. Tras terminar sus estudios, se mudó a Trieste, donde trabajó como periodista y escritor. Durante la Segunda Guerra Mundial, se unió a la Resistencia y fue uno de los fundadores del Partido Comunista esloveno.</p>
@@ -860,7 +1066,8 @@ Se vería así:
         <img src ="imagen de prueba.jpg" alt="La fortaleza Alamut ('Nido de águilas') en la actualidad" width="720" height="480">
         <p> <a id= "enlace-1">Assassin's Creed</a> es un galardonado videojuego de ficción histórica. La mayor parte del juego tiene lugar durante la Tercera Cruzada en Tierra Santa y la trama gira en torno a una secta conocida como la Orden Secreta de Hashshashin (Asesinos). El jugador es, en realidad, un hombre de hoy en día llamado Desmond Miles, el cual mediante el uso de una máquina llamada Animus, se permite la visualización y el control de la memoria genética de sus antepasados, en este caso, Altaïr Ibn-La 'Ahad, un miembro de los Asesinos. A través de esta trama, que emergen los detalles de una lucha entre dos grupos, los caballeros templarios y los nizaríes (asesinos), para conseguir un artefacto poderoso conocido como "Fruto del Edén", y tiene lugar principalmente durante la Tercera Cruzada en la Tierra Santa en 1191.</p>
         <a href="https://www.ubisoft.com/es-mx/game/assassins-creed/assassins-creed" target = "_blank" rel= "noopener noreferrer"><img src= "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/STNA8wMcQAfHTiYAOGfCF/911ea4ecd43cfd8594ab597e8980351a/AC1_game_overview_1.jpg" ></a>
-       <p></p>
+       <br>
+       <!--Lista-->
         <h3>Ficha de "Alamut"</h3>
         <ul>
           <li>Género: Novela </li>
@@ -874,28 +1081,68 @@ Se vería así:
         <form action="/enviar-respuesta">
           <!--Botones de radio-->
           <p>Selecciona tu Assassin's Creed favorito:</p>
-          <label><input type= "radio" name="seleccionar">Assassin's Creed (2007)</label><br>
-          <label><input type= "radio" name="seleccionar">Assassin's Creed II (2009)</label><br>
-          <label><input type= "radio" name="seleccionar">Assassin's Creed: Brotherhood (2010)</label><br>
-          <label><input type= "radio" name="seleccionar">Assassin's Creed: Revelations (2011)</label><br>
-          <label><input type= "radio" name="seleccionar">Assassin's Creed III (2012)</label><br>
-          <label><input type= "radio" name="seleccionar">Assassin's Creed IV: Black Flag (2013)</label><br>
-          <label><input type= "radio" name="seleccionar">Assassin's Creed: Rogue (2014)</label><br>
-          <label><input type= "radio" name="seleccionar">Assassin's Creed: Unity (2014)</label><br>
-          <label><input type= "radio" name="seleccionar">Assassin's Creed: Syndicate (2015)</label><br>
-          <label><input type= "radio" name="seleccionar">Assassin's Creed: Origins (2017)</label><br>
-          <label><input type= "radio" name="seleccionar">Assassin's Creed: Odyssey (2018)</label><br>
-          <label><input type= "radio" name="seleccionar">Assassin's Creed: Valhalla (2020)</label><br>
-          <label><input type= "radio" name="seleccionar">Assassin's Creed: Mirage (2023)</label><br>
+          <label>
+            <input type= "radio" name="seleccionar" value="Assassin's Creed (2007)" checked>Assassin's Creed (2007)
+          </label><br>
+          <label>
+            <input type= "radio" name="seleccionar" value="Assassin's Creed II (2009)">Assassin's Creed II (2009)
+          </label><br>
+          <label>
+            <input type= "radio" name="seleccionar" value="Assassin's Creed: Brotherhood (2010)">Assassin's Creed: Brotherhood (2010)
+          </label><br>
+          <label>
+            <input type= "radio" name="seleccionar" value="Assassin's Creed: Revelations (2011)">Assassin's Creed: Revelations (2011)
+          </label><br>
+          <label>
+            <input type= "radio" name="seleccionar" value="Assassin's Creed III (2012)">Assassin's Creed III (2012)
+          </label><br>
+          <label>
+            <input type= "radio" name="seleccionar" value="Assassin's Creed IV: Black Flag (2013)">Assassin's Creed IV: Black Flag (2013)
+          </label><br>
+          <label>
+            <input type= "radio" name="seleccionar" value="Assassin's Creed: Rogue (2014)">Assassin's Creed: Rogue (2014)
+          </label><br>
+          <label>
+            <input type= "radio" name="seleccionar" value="Assassin's Creed: Unity (2014)">Assassin's Creed: Unity (2014)
+          </label><br>
+          <label>
+            <input type= "radio" name="seleccionar" value="Assassin's Creed: Syndicate (2015)">Assassin's Creed: Syndicate (2015)
+          </label><br>
+          <label>
+            <input type= "radio" name="seleccionar" value="Assassin's Creed: Origins (2017)">Assassin's Creed: Origins (2017)
+          </label><br>
+          <label>
+            <input type= "radio" name="seleccionar" value="Assassin's Creed: Odyssey (2018)">Assassin's Creed: Odyssey (2018)
+          </label><br>
+          <label>
+            <input type= "radio" name="seleccionar" value="Assassin's Creed: Valhalla (2020)">Assassin's Creed: Valhalla (2020)
+          </label><br>
+          <label>
+            <input type= "radio" name="seleccionar" value="Assassin's Creed: Mirage (2023)">Assassin's Creed: Mirage (2023)
+          </label><br>
+
           <!--Casillas de verificación-->
           <p>Indica a qué géneros pertenece la saga (puedes seleccionar más de uno):</p>
-          <label><input type="checkbox" name="select">Ficción histórica</label><br>
-          <label><input type="checkbox" name="select">Ciencia ficción</label><br>
-          <label><input type="checkbox" name="select">Propaganda política</label><br>
+          <label>
+            <input type="checkbox" name="select" value="Ficcion historica" checked>Ficción histórica
+          </label><br>
+          <label>
+            <input type="checkbox" name="select" value="Ciencia ficcion">Ciencia ficción
+          </label><br>
+          <label>
+            <input type="checkbox" name="select" value="Propaganda politica">Propaganda política
+          </label><br>
+          
           <!--Texto y botón Enviar-->
           <input type="text" placeholder="Url de tu trailer favorito"> <button type="submit">Enviar</button><br>
         </form>
       </main>
+
+      <!--Pie de página-->
+      <hr>
+      <footer>
+        <p><small>Sin derechos de autor jaja :P - <a href = "https://www.instagram.com/bsfotografia__/" target = "_blank">@bsfotografia__</a></small></p>
+      </footer>
 
   </body>
         
