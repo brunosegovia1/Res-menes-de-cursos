@@ -135,7 +135,61 @@
 
 
 
+/*
+  PADDING
+  ==============================================================================================
 
+  El padding es la distancia que hay entre el borde de un elemento html y su contenido. Es una
+  propiedad que se coloca en los elementos para ajustar su tamaño en función a la cantidad de 
+  fondo que queremos tener visible.
+
+  Para explicarlo mejor usemos una imagen como ejemplo. Supongamos que creamos una imagen y le po- 
+  -nemos un background de algún color. Pues ese color no será visible porque por defecto las imá-
+  -genes ocupan todo el contenido del espacio que ocupan hasta el borde. Es ahí cuando aplicamos
+  el atributo padding, que crea un nuevo margen dentro del borde para que la imagen no ocupe todo
+  el espacio visible del contenido y podamos ver el fondo.
+
+  Para hacerlo colocamos la propiedad padding y le asignamos la cantidad de px que queremos que 
+  tenga.
+
+  Se usaría por ejemplo así: 
+
+  .imgn
+{
+  padding: 15px;
+  background-color: crimson;
+  width: 1080px;
+  height: auto;
+  border-radius: 900px;
+
+
+  Ojo, esto pondrá un padding en 4 bordes del elemento, para especificar la cantidad de paddding
+  que queremos en cada borde especificando los lados, así: 
+
+  padding-top: tantospx;
+  padding-bottom: tantospx;
+  padding-left: tantospx;
+  padding-right: tantospx;
+
+  
+  Incluso podemos hacerlo sin ocupar tantas líneas. Solo debemos escribir padding y especificar los
+  valores en sentido de las agujas del reloj, comenzando por el borde superior, hacia el borde derecho.
+
+  Ejemplo: 
+
+  padding: 15px 5px 15px 5px;
+
+
+*/
+
+
+
+/*
+  MARGEN
+  ==========================================================================================
+
+  
+*/
   
 body
 {
@@ -155,6 +209,8 @@ a
   width: 1080px;
   height: auto;
   border-radius: 900px;
+  padding: 5px 15px 5px 15px ;
+  background-color: rgb(173, 8, 41);
 }
 
 .bordes
