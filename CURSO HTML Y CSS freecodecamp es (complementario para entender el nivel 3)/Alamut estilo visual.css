@@ -1,226 +1,171 @@
 /*
-  GOOGLE FONTS
-  ===============================================================================
+  SELECTORES CSS
+  ==========================================================================
 
-  Otra opción que podemos usar para personalizar la familia de la fuente que usa-
-  -mos es Google fonts. Podemos importar fuentes de fonts.Googlel.com
+  Los selectores nos permiten ver qué elementos van a estar afectados por 
+  las reglas Css.
 
-  Allí nos fijamos en qué fuente queremos y la abrimos. Una vez dentro nos van a
-  salir los distintos estilos que hay para esa fuente, a la derecha de cada uno
-  veremos un botón que dice "select nombredelestilo +". Apretamos ahí y luego ve-
-  -remos que en la parte de arriba a la derecha salen unos cuadraditos con el 
-  símbolo "+", clicamos ahí y nos saldrá la fuente que seleccionamos.
+  Recordemos que en el el archivo Css aplicamos reglas de estilo visual al 
+  código html que ya hemos hecho, por eso, tan solo basta con escribir el 
+  elemento que tenemos creado para aplicarle las reglas de estilo.
 
-  Una vez ahí nos saldrán dos opciones. Una de ellas es un elemento <link> para
-  copiarlo en el <head> de nuestro html.
-
-  Abajo nos saldrá un texto que dice "CSS rules to specify families" y abajo de
-  eso lo que tenemos que poner para que se aplque la fuente. Lo copiamos en nues-
-  -tro código y ya está. Quedaría algo así, por ejemplo: 
-
-    font-family:  'Bacasime Antique', serif;
+  Pero para entenderlo mejor, vamos a ver distintos tipos de selectores
+  básicos en este curso, uno de ellos ya lo aprendimos a usar y es el
+  selector de tipo.
 */
 
 
 
 /*
-  CAMBIAR TAMAÑO DE LAS IMÁGENES
+  SELECTOR DE TIPO:
+  ==========================================================================
+
+  Son los que acabamos de explicar, tan solo basta escribir el nombre del
+  elemento para aplicarle reglas de estilo, por ejemplo: 
+
+  h1
+  {
+      color: brown;
+  }
+
+  a
+  {
+    color: brown;
+  }
+
+*/
+
+
+
+/*
+  SELECTOR UNIVERSAL
+  =============================================================================
+
+  Es aquel que afecta al archivo completo y se hace igual que el selector de tipo
+  pero utilizando "*", por ejemplo así: 
+
+  *
+  {
+    background-color:black;         //PARA CAMBIAR COLOR DEL FONDO A NEGRO
+    color:beige;                    //PARA CAMBIAR EL COLOR DE TODO TEXTO QUE HAYA A BEIGE
+  }
+
+  Veremos cómo cambia todo el fondo y las letras al color que especificamos
+*/
+
+
+
+/*
+  SELECTORES DE CLASE
+  ================================================================================
+
+  Los selectores de clase son muy muy muy muy importantes, nos permiten aplicar un
+  estilo a una parte específica del código que contenga el atributo class y una 
+  palabra clave que nosotros elijamos.
+
+  Veamos cómo se usan con un ejemplo. Supongamos que quiero estilizar mi formulario,
+  entonces debo ponerle el atributo class: 
+
+  <form class="Formulario">
+    Todo el formulario
+  </form>
+
+  Luego, aquí en Css usamos el nombre que le dimos a esa class y le ponemos un punto 
+  adelante. Después abrimos llaves y en ellas colocamos lo que queramos ponerle, por
+  ejemplo así: 
+
+  .Formulario
+  {
+    color: yellow;
+  }
+
+
+*/
+
+
+
+/*
+TAMAÑO DE FUENTE
+================================================================================
+
+El tamaño de fuente se modifica utilizando la propiedad "font-size". Debemos es-
+-cribir: 
+
+font-size: número del tamaño que queremos que tenga la fuentepx
+
+por ejemplo:
+
+font-size: 12px
+
+En un selector de tipo, si por ejemplo, queremos modificar el tamaño de fuente de
+varios elementos, podemos hacer hacer lo siguiente:
+
+elemento1,
+elemento2
+elemento3
+{
+  modificación que queremos aplicar
+}
+
+*/
+
+
+
+/*
+  FAMILIAS TIPOGRÁFICAS
   ====================================================================================
 
-  Ya sabemos cómo modificar el tamaño de las imágenes desde html.
-  Se hace así, por ejemplo:
+  Veamos ahora cómo cambiar el TIPO de fuente con Css.
 
-  img
-  {
-    widht: númerodeanchoquequeremospx;
-    height: númerodealtoquequeremospx;
-  }  
+  Tan solo debemos escribir la propiedad font-family y asignar el tipo de fuente, así
+  por ejemplo:
 
-  Sin embargo, haciendo eso cambiará el tamaño de todas las imágenes. Para cambiar solo
-  algunas debemos usar el atributo class.
-
-  NOTA: recordemos que podemos especificar el tamaño del alto o el ancho y en una de las
-  dos poner "auto".
-*/
-
-
-
-/*
-  AÑADE BODRDES ALREDEDOR DE UN ELEMENTO
-  =======================================================================================
-
-  Podemos crearle un borde a cualquier elemento, para eso existe la propiedad "border", 
-  donde debemos incluir el estilo, el ancho y el color, así: 
-
-  border-width: númerodeanchoquequeremospx;
-  border-color: color de borde que queremos;
-  border-style: estilo de borde que queremos;
-
-  También podemos mezclar estilos de borde colocando varios uno al lado del otro y se apli-
-  -carán en el sentido de las agujas del reloj, por ejemplo así: 
-
-  border-style: solid dashed dotted double;
-*/
-
-
-
-/*
-  ESQUINAS REDONDEADAS
-  ==========================================================================================
-
-  Podemos hacer que un elemento tenga bordes redondeados usando la propiedad "border-radius",
-  que generalmente se usa para imágenes.
-  
-  Se hace así: 
-
-  border-radius tamañodelborderedondeadopx;
-*/
-
-
-
-/*
-  IMÁGENES REDONDEADAS
-  ==========================================================================================
-
-  Si queremos que una imagen se vea como un círculo, solo debemos cambiar donde dice "px" en
-  la propiedad "border-radius" por "%".
-
-  Por ejemplo:
-
-  border-radius: 50%;
-*/
-
-
-
-/*
-  COLOR DE FONDO DE UN <div>
-  ===========================================================================================
-
-  Recordemos que los <div> son contenedores genéricos que aprendimos a colocar en html. Bueno,
-  en Css podemos usarlos para generar estilos en zonas específicas. Debemos hacerlo con selec-
-  -tores de tipo en CSS.
-
-  Ejemplo:
-
-  div
-  {
-    background-color: yellow;
-  }
-*/
-
-
-
-/*
-  ATRIBUTO ID EN CSS
-  =============================================================================================
-
-  El id será un identificador único para un elemento en tu página.
-
-  Si nosotros queremos asignarle un estilo a UN SOLO elemento específico, podemos usar el id. Es
-  lo mismo que un class, con la diferencia de que el id se puede utilizar solo una vez dentro de
-  la página, mientras que el class se puede repetir varias veces.
-
-  Se usa así:
-
-  En el documento html, dentro del elemento al que le queremos aplicar el estilo, colocamos 
-  "id="nombre del id"
-  
-  Luego en Css colocamos: 
-
-  #id
-  {
-    estilo que vamos a aplicar
-  }
-*/
-
-
-
-/*
-  PADDING
-  ==============================================================================================
-
-  El padding es la distancia que hay entre el borde de un elemento html y su contenido. Es una
-  propiedad que se coloca en los elementos para ajustar su tamaño en función a la cantidad de 
-  fondo que queremos tener visible.
-
-  Para explicarlo mejor usemos una imagen como ejemplo. Supongamos que creamos una imagen y le po- 
-  -nemos un background de algún color. Pues ese color no será visible porque por defecto las imá-
-  -genes ocupan todo el contenido del espacio que ocupan hasta el borde. Es ahí cuando aplicamos
-  el atributo padding, que crea un nuevo margen dentro del borde para que la imagen no ocupe todo
-  el espacio visible del contenido y podamos ver el fondo.
-
-  Para hacerlo colocamos la propiedad padding y le asignamos la cantidad de px que queremos que 
-  tenga.
-
-  Se usaría por ejemplo así: 
-
-  .imgn
-{
-  padding: 15px;
-  background-color: crimson;
-  width: 1080px;
-  height: auto;
-  border-radius: 900px;
-
-
-  Ojo, esto pondrá un padding en 4 bordes del elemento, para especificar la cantidad de paddding
-  que queremos en cada borde especificando los lados, así: 
-
-  padding-top: tantospx;
-  padding-bottom: tantospx;
-  padding-left: tantospx;
-  padding-right: tantospx;
-
-  
-  Incluso podemos hacerlo sin ocupar tantas líneas. Solo debemos escribir padding y especificar los
-  valores en sentido de las agujas del reloj, comenzando por el borde superior, hacia el borde derecho.
-
-  Ejemplo: 
-
-  padding: 15px 5px 15px 5px;
-
+  font-family: Verdana;
 
 */
+*
+{ 
+  background-color:rgb(17, 17, 17);
+}
 
-
-
-/*
-  MARGEN
-  ==========================================================================================
-
-  
-*/
-  
 body
 {
-  background-color: black;
   color: beige;
-  font-family:  'Bacasime Antique', serif;
-  font-size: 22px;
+}
+
+h1
+{
+  font-size: 60px;  
+  color: rgb(196, 61, 61);
+}
+
+.subt
+{
+  font-size: 25px;
+}
+
+p
+{
+  font-size: 18px;
 }
 
 a
 {
-  color: rgb(215, 28, 28);
+  color: rgb(216, 0, 0);
 }
 
-.imgn
+.rojo
 {
-  width: 1080px;
-  height: auto;
-  border-radius: 900px;
-  padding: 5px 15px 5px 15px ;
-  background-color: rgb(173, 8, 41);
+  color: rgb(236, 29, 29);
 }
 
-.bordes
+.blanco
 {
-  border-width: 8px;
-  border-color: wheat;
-  border-style: ridge;
+  color: aliceblue;
 }
 
-div
+.pie
 {
-  background-color: rgb(48, 33, 33);
+  font-family: Times New Roman;
+  font-size: 2px;
 }
