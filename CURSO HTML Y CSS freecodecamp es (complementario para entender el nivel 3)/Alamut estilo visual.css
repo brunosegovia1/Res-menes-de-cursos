@@ -1,171 +1,483 @@
 /*
-  SELECTORES CSS
-  ==========================================================================
+  GOOGLE FONTS
+  ===============================================================================
 
-  Los selectores nos permiten ver qué elementos van a estar afectados por 
-  las reglas Css.
+  Otra opción que podemos usar para personalizar la familia de la fuente que usa-
+  -mos es Google fonts. Podemos importar fuentes de fonts.Googlel.com
 
-  Recordemos que en el el archivo Css aplicamos reglas de estilo visual al 
-  código html que ya hemos hecho, por eso, tan solo basta con escribir el 
-  elemento que tenemos creado para aplicarle las reglas de estilo.
+  Allí nos fijamos en qué fuente queremos y la abrimos. Una vez dentro nos van a
+  salir los distintos estilos que hay para esa fuente, a la derecha de cada uno
+  veremos un botón que dice "select nombredelestilo +". Apretamos ahí y luego ve-
+  -remos que en la parte de arriba a la derecha salen unos cuadraditos con el 
+  símbolo "+", clicamos ahí y nos saldrá la fuente que seleccionamos.
 
-  Pero para entenderlo mejor, vamos a ver distintos tipos de selectores
-  básicos en este curso, uno de ellos ya lo aprendimos a usar y es el
-  selector de tipo.
+  Una vez ahí nos saldrán dos opciones. Una de ellas es un elemento <link> para
+  copiarlo en el <head> de nuestro html.
+
+  Abajo nos saldrá un texto que dice "CSS rules to specify families" y abajo de
+  eso lo que tenemos que poner para que se aplque la fuente. Lo copiamos en nues-
+  -tro código y ya está. Quedaría algo así, por ejemplo: 
+
+    font-family:  'Bacasime Antique', serif;
 */
 
 
 
 /*
-  SELECTOR DE TIPO:
-  ==========================================================================
-
-  Son los que acabamos de explicar, tan solo basta escribir el nombre del
-  elemento para aplicarle reglas de estilo, por ejemplo: 
-
-  h1
-  {
-      color: brown;
-  }
-
-  a
-  {
-    color: brown;
-  }
-
-*/
-
-
-
-/*
-  SELECTOR UNIVERSAL
-  =============================================================================
-
-  Es aquel que afecta al archivo completo y se hace igual que el selector de tipo
-  pero utilizando "*", por ejemplo así: 
-
-  *
-  {
-    background-color:black;         //PARA CAMBIAR COLOR DEL FONDO A NEGRO
-    color:beige;                    //PARA CAMBIAR EL COLOR DE TODO TEXTO QUE HAYA A BEIGE
-  }
-
-  Veremos cómo cambia todo el fondo y las letras al color que especificamos
-*/
-
-
-
-/*
-  SELECTORES DE CLASE
-  ================================================================================
-
-  Los selectores de clase son muy muy muy muy importantes, nos permiten aplicar un
-  estilo a una parte específica del código que contenga el atributo class y una 
-  palabra clave que nosotros elijamos.
-
-  Veamos cómo se usan con un ejemplo. Supongamos que quiero estilizar mi formulario,
-  entonces debo ponerle el atributo class: 
-
-  <form class="Formulario">
-    Todo el formulario
-  </form>
-
-  Luego, aquí en Css usamos el nombre que le dimos a esa class y le ponemos un punto 
-  adelante. Después abrimos llaves y en ellas colocamos lo que queramos ponerle, por
-  ejemplo así: 
-
-  .Formulario
-  {
-    color: yellow;
-  }
-
-
-*/
-
-
-
-/*
-TAMAÑO DE FUENTE
-================================================================================
-
-El tamaño de fuente se modifica utilizando la propiedad "font-size". Debemos es-
--cribir: 
-
-font-size: número del tamaño que queremos que tenga la fuentepx
-
-por ejemplo:
-
-font-size: 12px
-
-En un selector de tipo, si por ejemplo, queremos modificar el tamaño de fuente de
-varios elementos, podemos hacer hacer lo siguiente:
-
-elemento1,
-elemento2
-elemento3
-{
-  modificación que queremos aplicar
-}
-
-*/
-
-
-
-/*
-  FAMILIAS TIPOGRÁFICAS
+  CAMBIAR TAMAÑO DE LAS IMÁGENES
   ====================================================================================
 
-  Veamos ahora cómo cambiar el TIPO de fuente con Css.
+  Ya sabemos cómo modificar el tamaño de las imágenes desde html.
+  Se hace así, por ejemplo:
 
-  Tan solo debemos escribir la propiedad font-family y asignar el tipo de fuente, así
-  por ejemplo:
+  img
+  {
+    widht: númerodeanchoquequeremospx;
+    height: númerodealtoquequeremospx;
+  }  
 
-  font-family: Verdana;
+  Sin embargo, haciendo eso cambiará el tamaño de todas las imágenes. Para cambiar solo
+  algunas debemos usar el atributo class.
+
+  NOTA: recordemos que podemos especificar el tamaño del alto o el ancho y en una de las
+  dos poner "auto".
+*/
+
+
+
+/*
+  AÑADE BODRDES ALREDEDOR DE UN ELEMENTO
+  =======================================================================================
+
+  Podemos crearle un borde a cualquier elemento, para eso existe la propiedad "border", 
+  donde debemos incluir el estilo, el ancho y el color, así: 
+
+  border-width: númerodeanchoquequeremospx;
+  border-color: color de borde que queremos;
+  border-style: estilo de borde que queremos;
+
+  También podemos mezclar estilos de borde colocando varios uno al lado del otro y se apli-
+  -carán en el sentido de las agujas del reloj, por ejemplo así: 
+
+  border-style: solid dashed dotted double;
+*/
+
+
+
+/*
+  ESQUINAS REDONDEADAS
+  ==========================================================================================
+
+  Podemos hacer que un elemento tenga bordes redondeados usando la propiedad "border-radius",
+  que generalmente se usa para imágenes.
+  
+  Se hace así: 
+
+  border-radius tamañodelborderedondeadopx;
+*/
+
+
+
+/*
+  IMÁGENES REDONDEADAS
+  ==========================================================================================
+
+  Si queremos que una imagen se vea como un círculo, solo debemos cambiar donde dice "px" en
+  la propiedad "border-radius" por "%".
+
+  Por ejemplo:
+
+  border-radius: 50%;
+*/
+
+
+
+/*
+  COLOR DE FONDO DE UN <div>
+  ===========================================================================================
+
+  Recordemos que los <div> son contenedores genéricos que aprendimos a colocar en html. Bueno,
+  en Css podemos usarlos para generar estilos en zonas específicas. Debemos hacerlo con selec-
+  -tores de tipo en CSS.
+
+  Ejemplo:
+
+  div
+  {
+    background-color: yellow;
+  }
+*/
+
+
+
+/*
+  ATRIBUTO ID EN CSS
+  =============================================================================================
+
+  El id será un identificador único para un elemento en tu página.
+
+  Si nosotros queremos asignarle un estilo a UN SOLO elemento específico, podemos usar el id. Es
+  lo mismo que un class, con la diferencia de que el id se puede utilizar solo una vez dentro de
+  la página, mientras que el class se puede repetir varias veces.
+
+  Se usa así:
+
+  En el documento html, dentro del elemento al que le queremos aplicar el estilo, colocamos 
+  "id="nombre del id"
+  
+  Luego en Css colocamos: 
+
+  #id
+  {
+    estilo que vamos a aplicar
+  }
+*/
+
+
+
+/*
+  PADDING
+  ==============================================================================================
+
+  El padding es la distancia que hay entre el borde de un elemento html y su contenido. Es una
+  propiedad que se coloca en los elementos para ajustar su tamaño en función a la cantidad de 
+  fondo que queremos tener visible.
+
+  Para explicarlo mejor usemos una imagen como ejemplo. Supongamos que creamos una imagen y le po- 
+  -nemos un background de algún color. Pues ese color no será visible porque por defecto las imá-
+  -genes ocupan todo el contenido del espacio que ocupan hasta el borde. Es ahí cuando aplicamos
+  el atributo padding, que crea un nuevo margen dentro del borde para que la imagen no ocupe todo
+  el espacio visible del contenido y podamos ver el fondo.
+
+  Para hacerlo colocamos la propiedad padding y le asignamos la cantidad de px que queremos que 
+  tenga.
+
+  Se usaría por ejemplo así: 
+
+  .imgn
+{
+  padding: 15px;
+  background-color: crimson;
+  width: 1080px;
+  height: auto;
+  border-radius: 900px;
+
+
+  Ojo, esto pondrá un padding en 4 bordes del elemento, para especificar la cantidad de paddding
+  que queremos en cada borde especificando los lados, así: 
+
+  padding-top: tantospx;
+  padding-bottom: tantospx;
+  padding-left: tantospx;
+  padding-right: tantospx;
+
+  
+  Incluso podemos hacerlo sin ocupar tantas líneas. Solo debemos escribir padding y especificar los
+  valores en sentido de las agujas del reloj, comenzando por el borde superior, hacia el borde derecho.
+
+  Ejemplo: 
+
+  padding: 15px 5px 15px 5px;
+
+
+  Otra cosa que podemos hacer es, si queremos que la parte superior e inferior sean iguales y que la 
+  derecha e izquierda lo sean también, podemos especificar solo la de arriba y la de la derecha, así: 
+
+  padding: 15px 5px;
 
 */
-*
-{ 
-  background-color:rgb(17, 17, 17);
-}
 
+
+
+/*
+  MARGEN
+  ==========================================================================================
+
+  El margen es como el padding y hasta se usa de la misma forma, solo que está fuera del bor-
+  -de del elemento y que se aplica usando la palabra "margin".
+*/
+
+
+
+/*
+  SELECTORES DE ATRIBUTO
+  ===========================================================================================
+
+  Recordemos que los selectores son formas de aplicar un estilo a los elementos que queramos
+  en html. Los selectores ded atributo nos permiten elegir cambiar todos los elementos que
+  contengan un atributo específico. Se crean así: 
+
+  elemento[atributo="valor del atributo"]
+  {
+    estilo que le vamos a aplicar
+  }
+
+  o así: 
+
+  elemento[atributo]
+  {
+    estilo que le vamos a aplicar
+  }
+
+  o así: 
+
+  [atributo]
+  {
+    estilo que le vamos a aplicar
+  }
+
+
+  Ejemplo: 
+
+  input[type="text"]
+  {
+    margin-top: 20px;
+  }
+
+*/
+
+
+
+/*
+  UNIDADES ABSOLUTAS Y RELATIVAS
+  ========================================================================================
+
+  Las unidades absolutas y relativas aquí aplican cambios de tamaño a los elementos y/o su 
+  contenido. Las unidades absolutas son aquellas que se mantienen iguales una vez que las
+  definimos, como los pixeles. En cambio, las unidades relativas se adaptan a un tamaño que
+  nosotros preestablecemos, como el ancho del dispositivo.
+
+  Cuando usamos em, por ejemplo, la propiedad a la que le apliquemos esa unidad de medida
+  se ajustará al tamaño de la fuente de la letra.
+
+  Ejemplo
+
+  .em
+  {
+    background-color: blue;
+    width: 15em;
+    font-size: larger;
+  }
+*/
+
+
+
+
+/*
+  PRIORIZA UN ESTILO SOBRE OTRO
+  =======================================================================================
+
+  Las siglas CSS significan "Cascading Style Sheets", que en español se traduce como "Ho-
+  -jas de estilo en cascada". Se dice "en cascada" porque en los estilos que vamos apli-
+  -cando se va priorizando el último que escribimos, el que sale más abajo. Es decir, si
+  por ejemplo, primero colocamos un subrayado a una frase y abajo ponemos que va sin sub-
+  -rayado, esta última opción será la que veremos en la página.
+
+  Sin embargo, Css prioriza algunos atributos independientemente del orden, como las clases.
+
+  
+  PRIORIDAD DE class VS id
+
+  Sin importar el orden dispuesto, un id tendrá prioridad sobre las clases por ser más espe-
+  -cífico.
+
+
+  PRIORIDAD DE LOS ESTILOS EN LÍNEA
+
+  Recordemos que los estilos en línea son aquellos que aplicamos dentro de html, en las lí-
+  -neas de código. Pues esos son los que tienen mayor prioridad incluso que las clases y los
+  id.
+*/
+
+
+
+
+/*
+  !IMPORTANT
+  ===========================================================================================
+
+  Colocar "!important" al lado del valor de una propiedad hará que se priorice ese estilo sin
+  importar dónde esté colocado o el atributo que use.
+
+  Ejemplo: 
+
+  hr
+  {
+    margin-top: 40px !important;
+  }
+
+*/
+
+
+
+/*
+  CÓDIGOS HEXADECIMALES PARA COLORES
+  ==============================================================================================
+
+  Nosotros generalmente usamos el código decimal, que son 10 dígitos que van del 0 al 9. Para 
+  formar más números solo hacemos combinaciones entre ellos. El código hexadecimal son 16 dígitos
+  que incluyen los números del 0 al 9 y las letras de la A a la F, haciendo combinaciones entre
+  estos para formar palabras o números.
+
+  En Css podemos usar el código hexadecimal para elegir un color específico que le queramos apli-
+  -car a un elemento. Solo debemos colocar un # y al lado el código hexadecimal que le corresponde
+  a ese color, así: 
+
+  color: #32a852
+
+  No hay problema si no sabes usarlo. Colocando en google "color picker" te va a salir la gama de 
+  colores para que la elijas y al lado el código hexadecimal para que lo copies.
+*/
+
+
+
+/*
+  VALORES RGB PARA COLORES
+  =================================================================================================
+
+  RGB son siglas de "Red Green Blue"(rojo verde azul), que es la gama de colores que usa Css. Si 
+  queremos usarla debemos colocar "rgb (valor rojo, valor verde, valor azul)", por ejemplo así: 
+
+  color: rgb(215, 28, 28);
+
+  En color picker también nos saldrán los valores rgb.
+
+  Si usamos Visual Studio Code, cuando ponemos un color, nos saldrá un cuadro al lado. Ahí podemos
+  colocar el mouse y se desplegará la gama de colores para que podamos elegirla.
+
+
+  También podemos especificar la TRANSPARENCIA de un color colocando "rgba (valor rojo, valor verde, 
+  valor azul, valor de transparencia)".
+*/
+
+
+
+/*
+  VARIABLES EN CSS
+  ==================================================================================================
+
+  Hasta ahora venimos trabajando con propiedades dentro de los elementos, pero también po-
+  -demos crear variables, que básicamente son nombres que le podemos asignar a un valor en Css.
+
+  Las variables se hacen así: 
+
+  --nombre-de-variable: valor;
+
+  Ejemplo: 
+
+  --pingüino-pancita: grey;
+
+
+
+  las variables nos sirven para cuando queremos aplicar muchas veces el mismo valor en el archivo,
+  entonces creamos la variable para tener un nombre que represente ese valor.
+
+
+
+  Luego, para USAR UNA VARIABLE, debemos ponerla dentro de una propiedad, así: 
+
+  propiedad: var(--nombre-de-variable)
+ 
+*/
+
+
+
+/*
+  COMPATIBILIDAD DE VARIABLES CON OTROS NAVEGADORES
+  =========================================================================================================
+
+  Nos puede suceder que queramos abrir la página en otros navegadores y que se vea incompleta. Eso es porque
+  no todos detectan las variables, así que debemos modificar un poco la forma en que aplicamos la variable
+  en ese navegador.
+
+  Si en el navegador que funciona luce así: 
+   
+  propiedad: var(--nombre-de-variable)
+
+  En el otro, para que funcione, debe verse así: 
+
+  propiedad: valor;
+  propiedad: var(--nombre-de-variable, valor);
+
+*/
+
+
+
+/*
+  HERENCIA DE VARIABLES EN CSS
+  ====================================================================================================
+
+  Si queremos que una variable se aplique a todo el documento podemos usar la pseudoclase .root, que se
+  aplica directamente en la raíz del documento, es decir, la etiqueta html. Definimos la variable dentro
+  de .root y se aplicará a todos los elementos.
+
+  Se usa así: 
+
+  .root
+  {
+    --nombre-de-variable: valor;
+  }
+
+  CAMBIAR VARIABLE PARA UN ÁREA ESPECÍFICA
+
+  Si ya creamos la subclase .root y declaramos en ella nuestra variable, aún podemos modificarla en 
+  algún elemento del código para que se aplique de manera distinta.
+*/
+
+
+
+/*
+¡¡¡¡¡FELICITACIONES!!!!! LO LOGRASTEEEEEEEEE. YA HAS FINALIZADO ESTE CURSO. AHORA TE RECOMIENDO TOMARTE
+UN MERECIDO DESCANSO.
+
+NO DEJES DE TOMAR MUCHA AGUA, POR FAVOR. Y SI ES POSIBLE, TAMBIÉN HACÉ MUCHO EJERCICIO, QUE TE VA A HACER BIEN.
+
+MIL GRACIAS POR LEERME Y TE DESEO LO MEJOR :D
+*/
 body
 {
+  background-color: black;
   color: beige;
-}
-
-h1
-{
-  font-size: 60px;  
-  color: rgb(196, 61, 61);
-}
-
-.subt
-{
-  font-size: 25px;
-}
-
-p
-{
-  font-size: 18px;
+  font-family:  'Bacasime Antique', serif;
+  font-size: 22px;
 }
 
 a
 {
-  color: rgb(216, 0, 0);
+  color: rgb(215, 28, 28);
 }
 
-.rojo
+.imgn
 {
-  color: rgb(236, 29, 29);
+  width: 1080px;
+  height: auto;
+  border-radius: 900px;
+  padding: 5px 15px;
+  background-color: rgb(173, 8, 41);
 }
 
-.blanco
+.bordes
 {
-  color: aliceblue;
+  border-width: 8px;
+  border-color: wheat;
+  border-style: ridge;
 }
 
-.pie
+div
 {
-  font-family: Times New Roman;
-  font-size: 2px;
+  background-color: rgb(44, 0, 0);
+  padding-bottom: 1px;
+  padding-top: 15px;
+  padding-left: 15px;
+  
+}
+
+hr
+{
+  margin-top: 40px;
+}
+
+input[type="text"]
+{
+  margin-top: 20px;
 }
