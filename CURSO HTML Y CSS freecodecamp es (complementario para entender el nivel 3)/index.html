@@ -263,11 +263,6 @@ Se vería así:
   Se coloca:
   <img src = "https://link_de_la_imagen.com" width = "ancho deseado" height = "alto deseado">
 
-  Otra cosa que podemos hacer es colocar "auto" en el alto o en el ancho para especificar
-  uno y que el otro cambie proporcionalmente. Quedaría así:
-
-  <img src = "https://link_de_la_imagen.com" width = "ancho deseado" height = auto>
-
   Cuando la imagen no se carga, podemos poner un texto que la describa en su lugar (esto te lo
   van a agradecer mucho los que tienen una conexión lenta). Para ello ponemos alt = "texto".
 
@@ -956,6 +951,7 @@ Se vería así:
 
 <!--
   ¡BUEN TRABAJO! COMPLETASTE TODO LO QUE CORRESPONDE A HTML DE ESTE CURSO. ESTO YA ES UN GRAN AVANCE.
+
 -->
 
 
@@ -1046,17 +1042,17 @@ Se vería así:
   Este atributo con dicha especificación le hace saber al código html de qué manera
   afectará el vínculo.
 -->
+
+<!--
+  EL RESTO DEL CURSO CONTINÚA EN EL ARCHIVO CSS LLAMADO: "Continuación del curso en CSS".
+-->
 <!DOCTYPE html>
 
 <html lang = "es">  
   <!--Metadata-->
   <head>
     <title>El libro que inspiró Assassin's Creed</title>
-    <link href="Alamut estilo visual.css" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Continuación del curso en CSS.css">
   </head>
   <!--Body-->
   <body>
@@ -1065,21 +1061,20 @@ Se vería así:
         <h1>Breve biografía sobre <em>Vladimir Bartol</em></h1>
         <main>
         <!--SUBTÍTULO-->
-          <h3>El autor que inspiró al videojuego <a href="#enlace-1"><em>"Assassins Creed"</em></a></h3>
-          <br>
+          <h3 class="subt">El autor que inspiró al videojuego <a href="#enlace-1"><em>"Assassins Creed"</em></a></h3>
       </div>
               <!--TEXTO E IMÁGENES-->
         <p>Vladimir Bartol fue un escritor esloveno nacido en 1903 y fallecido en 1967. Aunque escribió varias obras, su trabajo más conocido es la novela "Alamut", publicada en 1938. La obra se convirtió en un éxito de ventas y es considerada una de las obras más importantes de la literatura eslovena del siglo XX.</p>
-        <img src = "https://idsb.tmgrup.com.tr/ly/uploads/images/2022/09/13/230594.jpeg" alt="Captura in-game de Assassins Creed: Mirage." width = "920" height = auto class="bordes">
+        <img src = "https://idsb.tmgrup.com.tr/ly/uploads/images/2022/09/13/230594.jpeg" alt="Captura in-game de Assassins Creed: Mirage." width = "720" height = "480" >
         <p>Bartol estudió en la Universidad de Ljubljana, donde se graduó en Filosofía y Lengua y Literatura eslovenas. Tras terminar sus estudios, se mudó a Trieste, donde trabajó como periodista y escritor. Durante la Segunda Guerra Mundial, se unió a la Resistencia y fue uno de los fundadores del Partido Comunista esloveno.</p>
         <p>Aunque Bartol escribió varias obras, ninguna de ellas tuvo el éxito de "Alamut". La novela cuenta la historia de un líder musulmán del siglo XI que <a href="https://historia.nationalgeographic.com.es/a/legendarios-guerreros-alamut-secta-asesinos_11317" target="_blank" rel="noopener noreferrer">crea una secta</a> con la que controla a sus seguidores mediante la manipulación de la realidad y la promesa de recompensas en la vida después de la muerte. La obra ha sido comparada con "1984" de George Orwell y "Un mundo feliz" de Aldous Huxley por su crítica a la manipulación y el control de la realidad.</p>
-        <img src ="imagen de prueba.jpg" alt="La fortaleza Alamut ('Nido de águilas') en la actualidad" width="720" height=auto class="bordes">
-        <p> <a id= "enlace-1">Assassin's Creed</a> es un galardonado videojuego de ficción histórica. La mayor parte del juego tiene lugar durante la Tercera Cruzada en Tierra Santa y la trama gira en torno a una secta conocida como la Orden Secreta de Hashshashin (Asesinos). El jugador es, en realidad, un hombre de hoy en día llamado Desmond Miles, el cual mediante el uso de una máquina llamada Animus, se permite la visualización y el control de la memoria genética de sus antepasados, en este caso, Altaïr Ibn-La 'Ahad, un miembro de los Asesinos. A través de esta trama, que emergen los detalles de una lucha entre dos grupos, los caballeros templarios y los nizaríes (asesinos), para conseguir un artefacto poderoso conocido como "Fruto del Edén", y tiene lugar principalmente durante la Tercera Cruzada en la Tierra Santa en 1191.</p>
-        <a href="https://www.ubisoft.com/es-mx/game/assassins-creed/assassins-creed" target = "_blank" rel= "noopener noreferrer"><img src= "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/STNA8wMcQAfHTiYAOGfCF/911ea4ecd43cfd8594ab597e8980351a/AC1_game_overview_1.jpg" class="imgn"></a>
+        <img src ="Imagen de prueba.jpg" alt="La fortaleza Alamut ('Nido de águilas') en la actualidad" width="720" height="480">
+        <p> <a id= "enlace-1">Assassin's Creed</a> es un galardonado videojuego de ficción histórica. La mayor parte del juego tiene lugar durante la Tercera Cruzada en Tierra Santa en 1191 y la trama gira en torno a una secta conocida como la Orden Secreta de Hashshashin (Asesinos). El jugador es, en realidad, un hombre de hoy en día llamado Desmond Miles, el cual mediante el uso de una máquina llamada Animus, se permite la visualización y el control de la memoria genética de sus antepasados, en este caso, Altaïr Ibn-La 'Ahad, un miembro de los Asesinos. A través de esta trama, que emergen los detalles de una lucha entre dos grupos, los caballeros templarios y los nizaríes (asesinos), para conseguir un artefacto poderoso conocido como "Fruto del Edén".</p>
+        <a href="https://www.ubisoft.com/es-mx/game/assassins-creed/assassins-creed" target = "_blank" rel= "noopener noreferrer"><img src= "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/STNA8wMcQAfHTiYAOGfCF/911ea4ecd43cfd8594ab597e8980351a/AC1_game_overview_1.jpg" ></a>
        <br>
        <!--Lista-->
-        <h3>Ficha de "Alamut"</h3>
-        <ul>
+        <h3 class="rojo">Ficha de "Alamut"</h3>
+        <ul class="rojo">
           <li>Género: Novela </li>
           <li>Tema(s): Ficción histórica, aventuras, drama, romance, acción</li>
           <li>Idioma: Esloveno</li>
@@ -1142,15 +1137,15 @@ Se vería así:
           <label>
             <input type="checkbox" name="select" value="Propaganda politica">Propaganda política
           </label><br>
-          
+          <br>
           <!--Texto y botón Enviar-->
-          <input type="text" placeholder="Url de tu trailer favorito"> <button type="submit">Enviar</button><br>
+          <input type="text" placeholder="Url de tu trailer favorito"> <button type="submit" class="blanco">Enviar</button><br>
         </form>
       </main>
 
       <!--Pie de página-->
       <hr>
-      <footer>
+      <footer class="pie">
         <p><small>Sin derechos de autor jaja :P - <a href = "https://www.instagram.com/bsfotografia__/" target = "_blank">@bsfotografia__</a></small></p>
       </footer>
 
