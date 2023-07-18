@@ -24,7 +24,8 @@ NOTA: PARA HACER ESTE CURSO ES NECESARIO TENER UNA BASE DE HTML Y CSS.
 
   En HTML definimos la estructura de los elementos de la página, pero al fin 
   y al cabo es solo un archivo, el DOM es lo que le dará esa capacidad pode-
-  -rosa y funcional 
+  -rosa y funcional de ser interactiva para el usuario. Eso lo logra haciendo
+  que el archivo html sea manipulable desde Javascript.
 
   "DOM"= "DOCUMENT OBJECT MODEL" (Modelo de objetos del documento)
   
