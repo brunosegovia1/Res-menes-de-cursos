@@ -140,3 +140,14 @@ NOTA: PARA HACER ESTE CURSO ES NECESARIO TENER UNA BASE DE HTML Y CSS.
 	nombre.style.color= '#6dff00';
 	nombre.style.textTransform= 'uppercase';
 */
+
+
+
+/*
+  TEXTO EN EL DOM
+	==============================================================================================
+
+	ACCEDER AL TEXTO
+
+	
+*/
